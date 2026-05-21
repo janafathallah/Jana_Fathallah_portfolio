@@ -1,0 +1,76 @@
+<div id="Internships" class="section">
+    <div id="page">
+        <h2>My Internships</h2>
+        <div id="container">
+            <div>
+                <div class="col">
+                    <div class="box" (click)="onClick('Hassan Allam Holding')">
+                        <h3>Front-end Developer Intern @ Hassan Allam Holding</h3>
+                    </div>
+                    <div class="box" (click)="onClick('German University in Cairo')">
+                        <h3>Junior Teaching Assistant-Data Structures & Algorithms @ German University in Cairo</h3>
+                    </div>
+                    <div class="box" (click)="onClick('ORA Developers')">
+                        <h3>Information Technology Intern @ ORA Developers</h3>
+                    </div>
+                    <div class="box" (click)="onClick('Elevvo Pathways')">
+                        <h3>Front-end Developer Intern @ Elevvo Pathways</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div #myModal class="modal" *ngIf="internship" id="model">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <h6 *ngIf="status == true">Currently still there</h6>
+                    </div>
+                    <div class="col">
+                        <span (click)="close()" class="close">&times;</span>
+                    </div>
+                </div>
+                <h4>{{internship.role}}</h4>
+                <div class="row">
+                    <div class="col">
+                        <label>Company:</label>
+                    </div>
+                    <div class="col">
+                        <h5>{{internship.company}}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Duration:</label>
+                    </div>
+                    <div class="col">
+                        <h5>{{internship.duration}}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Location Type:</label>
+                    </div>
+                    <div class="col">
+                        <h5>{{internship.locationType}}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Description:</label>
+                    </div>
+                    <div class="col">
+                        <h5>{{internship.description}}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label>Technologies Used:</label>
+                    </div>
+                    <div class="col">
+                        <h5>{{internship.technologiesUsed}}</h5>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

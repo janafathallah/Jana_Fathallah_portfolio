@@ -1,0 +1,19 @@
+#panel{
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+ul{
+    text-decoration: none;
+    display: flex;
+    list-style-type:none;
+    text-align: center;
+    border-radius: 25px;
+    background-color: antiquewhite;
+    width: 860px;
+}
+li{
+    margin: 10px 10px 10px 20px;
+}

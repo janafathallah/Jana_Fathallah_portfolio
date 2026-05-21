@@ -1,0 +1,58 @@
+#Internships{
+    height: 1600px;
+}
+#container{
+    display: flex;
+    justify-content: center;
+}
+h2{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    margin: 6% auto 5% auto;
+    font-size: x-large;
+}
+h4{
+    display: flex;
+    justify-content: center;
+    margin: 8% auto 5% auto;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+label{
+    font-weight: 500;
+    width: 200px;
+    margin: auto auto auto 5%;
+}
+.box{
+
+    border-radius: 15px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    width: 950px;
+    height:150px;
+    margin-top: 30px;
+}
+#model{
+    background-color: aliceblue;
+    width: 1500px;
+    height:750px;
+    margin: 8% 10%; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 15px;
+}
+span{
+    margin: 0% 98%;
+
+}
+#page{
+    margin-right: 0px;
+    padding-top: 70px;
+}
