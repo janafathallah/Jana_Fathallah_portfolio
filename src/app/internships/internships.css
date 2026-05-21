@@ -1,5 +1,5 @@
 #Internships{
-    height: 1600px;
+    height: 1300px;
 }
 #container{
     display: flex;
@@ -14,7 +14,7 @@ h2{
 h3{
     display: flex;
     justify-content: center;
-    margin: 6% auto 5% auto;
+    margin: auto auto 5% auto;
     font-size: x-large;
 }
 h4{
@@ -33,12 +33,17 @@ label{
 .box{
 
     border-radius: 15px;
-    border-color: black;
     border-width: 5px;
-    border-style: solid;
     width: 1100px;
     height:150px;
     margin-top: 30px;
+    padding-top: 60px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.box:hover{
+    background-color: hsla(172, 95%, 18%, 0.7);
+    
 }
 #model{
     background-color: aliceblue;

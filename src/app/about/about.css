@@ -1,5 +1,5 @@
 #About{
-    height: 700px;
+    height: 900px;
     
 }
 h2{
@@ -10,4 +10,11 @@ h2{
 #page{
     margin-right: 0px;
     padding-top: 70px;
+}
+p{
+    font-size: 30px;
+    width: 1000px;
+    margin-top: 40px;
+    margin-left: 450px;
+    text-align: center;
 }

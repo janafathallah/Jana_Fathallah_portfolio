@@ -16,6 +16,11 @@ export class Home {
   }
 
   goToEmail(){
-    window.location.href = "https://github.com/janafathallah";
+    const to = "janafathallahh@gmail.com";
+
+  window.open(
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${to}`,
+    "_blank"
+  );
   }
 }
