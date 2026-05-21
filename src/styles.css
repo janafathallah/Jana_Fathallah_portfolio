@@ -1,3 +1,15 @@
-h1,h2,h3,h4,h5{
-    font-family: Melankolis Front Swash;
+h2{
+    font-family: Title;
+    font-weight: 600;
+}
+h3,h4,h5,h6,label,p,li{
+    font-family: Text;
+}
+@font-face {
+  font-family: 'Title';
+  src: url('./assets/PlaywriteGBS-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'Text';
+  src: url('./assets/SpaceGrotesk-VariableFont_wght.ttf');
 }

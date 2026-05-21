@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+  goToGit(){
+    window.location.href = "https://github.com/janafathallah";
+  }
+
+  goToLinkedIn(){
+    window.location.href = "https://www.linkedin.com/in/jana-fathallah-bb71aa287";
+  }
+
+  goToEmail(){
+    window.location.href = "https://github.com/janafathallah";
+  }
+}
