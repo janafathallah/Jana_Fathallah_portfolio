@@ -1,0 +1,12 @@
+#GraduationProject{
+    height:1000px;
+}
+h2{
+    display:flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+#page{
+    margin-right: 0px;
+    padding-top: 70px;
+}

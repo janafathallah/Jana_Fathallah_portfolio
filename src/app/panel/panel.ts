@@ -8,13 +8,14 @@ import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 })
 export class Panel {
   @Output() component = new EventEmitter<string>();
-
+  @Output() contact = new EventEmitter<boolean>();
 
   onclick(name: string) {
     this.component.emit(name);
-    console.log(name);
   }
-
+  onContact(){
+    this.contact.emit(true);
+  }
   @HostListener('window:scroll', [])
   onWindowScroll() {
 

@@ -7,7 +7,7 @@
   src: url('./assets/SpaceGrotesk-VariableFont_wght.ttf');
 }
 body{
-  background-color: hsla(36, 31%, 90%, 1);
+  background-color: rgb(219, 204, 182);
 }
 h2{
     font-family: Title;

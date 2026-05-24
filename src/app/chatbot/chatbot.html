@@ -1,1 +1,33 @@
-<p>chatbot works!</p>
+<div id="chat">
+    <div class="top">
+        <div class="row">
+            <div class="col-2">
+                <div id="image"></div>
+            </div>
+            <div class="col">
+                <h4>Jana Bot</h4>
+                <h5>Ask me a question</h5>
+            </div>
+            <div class="col-2">
+                <span (click)="close()">&times;</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div id="messages">
+            <div class="message">
+                <p>Hi!</p>
+            </div>
+            <div class="message">
+                <p>I'm Jana Bot. I'm here to help you with any questions you might have about Jana's work.</p>
+            </div>
+            <div class="message">
+                <p>How can I help you today?</p>
+            </div>
+           <div *ngFor="let q of questions">
+
+           </div>
+           
+        </div>
+    </div>
+</div>

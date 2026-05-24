@@ -1,0 +1,70 @@
+#chat{
+  width: 400px;
+  height: 600px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+:host {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999999;
+}
+#image{
+    border: solid;
+    border-color: hsla(172, 95%, 18%, 1);
+    border-radius: 50%;
+    border-width: 2px;
+    height: 50px;
+    width: 50px;
+    background-image: url("/assets/self-image.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin-left: 10px;
+    margin-top: 10px;
+}
+h4{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+h5{
+    margin-top: 0;
+    font-size: 15px;
+}
+.top{
+    margin-bottom: 20px;
+    background-color: hsla(172, 95%, 18%, 1);
+    color: beige;
+    height: 70px;
+}
+.message{
+    border-style: solid;
+    border-radius: 15px;
+    width: fit-content;
+    border-width: 1px;
+    margin: auto 30px 10px 10px;
+    background-color: white;
+    color:  hsla(172, 95%, 18%, 1);
+}
+.question{
+    border-style: solid;
+    border-radius: 15px;
+    border-color:  hsla(172, 95%, 18%, 1);
+    width: fit-content;
+    margin: auto auto 10px 10px;
+    cursor: pointer;
+}
+p{
+    margin: 10px 10px;
+}
+span{
+    font-size: 25px;
+    margin-left: 20px;
+     cursor: pointer;
+}

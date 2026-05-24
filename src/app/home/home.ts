@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 })
 export class Home {
   goToGit(){
-    window.location.href = "https://github.com/janafathallah";
+    window.open("https://github.com/janafathallah", '_blank');
   }
 
   goToLinkedIn(){
-    window.location.href = "https://www.linkedin.com/in/jana-fathallah-bb71aa287";
+    window.open("https://www.linkedin.com/in/jana-fathallah-bb71aa287", '_blank');
   }
 
   goToEmail(){
