@@ -10,3 +10,91 @@ h2{
     margin-right: 0px;
     padding-top: 70px;
 }
+.face{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-image: url("/assets/man.png");
+    background-size: 500px;
+    margin-left: 100px;
+    margin-top: 60px;
+}
+.face::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/man (4).png");
+    background-size: 500px;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%,100%{
+        height: 0%;
+    }
+    50%{
+        height: 100%;
+    }
+}
+.face::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background:hsla(172, 95%, 18%, 0.8);
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px hsla(172, 95%, 18%, 0.8)) drop-shadow(0 0 60px hsla(172, 95%, 18%, 0.8));
+    animation: animate_line 4s ease-in-out infinite;
+}
+@keyframes animate_line{
+    0%,100%{
+        top: 0%;
+    }
+    50%{
+        top: 100%;
+    }
+}
+
+.face .dots{
+    position: absolute;
+    inset: 0;
+}
+.face .dots::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    
+}
+h4{
+    margin: 60px auto auto 300px;
+    font-size: 30px;
+}
+p{
+    width: 900px;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 300px;
+}
+.button{
+    width:400px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: hsla(172, 95%, 18%, 0.8);
+    margin-left: 550px;
+    margin-top: 70px;
+    cursor: pointer;
+}
+img{
+    width: 80px;
+    height: auto;
+    margin-left: 160px;
+    margin-top: 13px;
+}

@@ -24,10 +24,30 @@
             <div class="message">
                 <p>How can I help you today?</p>
             </div>
-           <div *ngFor="let q of questions">
+            <div *ngFor="let m of messages">
+                <div *ngIf="m.type=='user'" class="reply">
+                    <p>{{m.text}}</p>
+                </div>
+                <div *ngIf="m.type=='bot' && m.text=='Contact me'" class="contact" (click)="contactMe()">
+                    <div *ngIf="m.text=='typing'" class="typing"></div>
+                    <p *ngIf="m.text!='typing'">{{m.text}}</p>
+                </div>
+                <div *ngIf="m.type=='bot' && m.text!='Contact me'" class="message" #elseblock>
+                    <div *ngIf="m.text=='typing'" class="typing"></div>
+                    <p *ngIf="m.text!='typing'">{{m.text}}</p>
+                </div>
+            </div>
+            <div *ngIf="showQuestions">
 
-           </div>
-           
+                <div *ngFor="let q of questions">
+
+                    <div class="question" (click)="response(q)">
+                        <p>{{q}}</p>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
