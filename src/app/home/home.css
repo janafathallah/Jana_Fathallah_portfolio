@@ -8,7 +8,7 @@
     width: 40px;
     margin: 10px 0px auto 7px;
     display: flex;
-    justify-content: center; /* horizontal center */
+    justify-content: center; 
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease;     
@@ -22,7 +22,7 @@ h2{
     width: 700px;
 }
 #name{
-    margin-left: 130px;
+    margin-left: 160px;
     margin-top: 340px;
 }
 #image{

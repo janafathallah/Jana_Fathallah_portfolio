@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, EventEmitter, Input, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ export class App {
   protected readonly title = signal('PersonalWebsite');
   selectedComponent = '';
   contact=false;
+  isDarkMode = false;
 
   onComponent(name: string) {
       this.selectedComponent = name;
@@ -26,6 +27,17 @@ export class App {
   onChat(close: boolean){
     if(close){
       this.contact=false;
+    }
+  }
+
+  onMode(mode: boolean){
+    if(mode){
+      document.body.classList.add('dark-mode');
+      this.isDarkMode=true;
+      
+  } else {
+    document.body.classList.remove('dark-mode');
+      this.isDarkMode=false;
     }
   }
 }

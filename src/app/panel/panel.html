@@ -1,12 +1,21 @@
-<div id="panel" >
-    <ul id="ul">
-        <li (click)="onclick('Home')">Home</li>
-        <li (click)="onclick('About')">About</li>
-        <li (click)="onclick('Internships')">Internships</li>
-        <li (click)="onclick('Skills')">Skills</li>
-        <li (click)="onclick('Projects')">Projects</li>
-        <li (click)="onclick('GraduationProject')">Graduation Project</li>
-        <li (click)="onclick('Extracurriculars')">Extracurriculars</li>
-        <li (click)="onContact()">Contact</li>
-    </ul>
+<div id="panel">
+    <div class="row">
+        <div class="col" id="pan">
+            <ul id="ul">
+                <li (click)="onclick('Home')">Home</li>
+                <li (click)="onclick('About')">About</li>
+                <li (click)="onclick('Internships')">Internships</li>
+                <li (click)="onclick('Skills')">Skills</li>
+                <li (click)="onclick('Projects')">Projects</li>
+                <li (click)="onclick('GraduationProject')">Graduation Project</li>
+                <li (click)="onContact()">Chat</li>
+            </ul>
+        </div>
+        <div class="col">
+            <div id="button" (click)="toggleMode()">
+                <img *ngIf="darkMode==false" src="/assets/weather (1).png">
+                <img *ngIf="darkMode" src="/assets/weather (2).png">
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,9 +1,8 @@
-<app-panel (component)="onComponent($event)" (contact)="onContact($event)"></app-panel>
+<app-panel (component)="onComponent($event)" (contact)="onContact($event)" (mode)="onMode($event)" [darkMode]="isDarkMode"></app-panel>
 <app-home></app-home>
 <app-about></app-about>
 <app-internships></app-internships>
-<app-skills></app-skills>
+<app-skills ></app-skills>
 <app-projects></app-projects>
 <app-grad-project></app-grad-project>
-<app-extra-curriculars></app-extra-curriculars>
 <app-chatbot *ngIf="contact" (chat)="onChat($event)"></app-chatbot>

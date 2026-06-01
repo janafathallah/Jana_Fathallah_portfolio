@@ -9,6 +9,13 @@
 body{
   background-color: rgb(219, 204, 182);
 }
+body.dark-mode {
+  background-color: hsla(172, 95%, 18%, 1);
+  color: rgb(255, 255, 255);
+}
+body.dark-mode h2 {
+  color: rgb(86, 184, 171);
+}
 h2{
     font-family: Title;
     font-weight: 1000;

@@ -11,7 +11,6 @@ import { Projects } from './projects/projects';
 import { Chatbot } from './chatbot/chatbot';
 import { Internships } from './internships/internships';
 import { GradProject } from './grad-project/grad-project';
-import { ExtraCurriculars } from './extra-curriculars/extra-curriculars';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { FormsModule } from '@angular/forms';
     Chatbot,
     Internships,
     GradProject,
-    ExtraCurriculars,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
