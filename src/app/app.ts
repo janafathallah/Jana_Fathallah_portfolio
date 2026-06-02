@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, input, signal } from '@angular/core';
+import { Component, EventEmitter, Input, signal, ViewChild } from '@angular/core';
+import { Skills } from './skills/skills';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +12,16 @@ export class App {
   selectedComponent = '';
   contact = false;
   isDarkMode = false;
+  @ViewChild(Skills)
+  skillsComponent!: Skills;
 
   onComponent(name: string) {
     this.selectedComponent = name;
     const section = document.getElementById(name);
     section?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if(name=='Skills'){
+      this.skillsComponent.animateAll();
+    }
   }
 
   onContact(open: boolean) {
