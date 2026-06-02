@@ -45,11 +45,19 @@ label{
     background-color: rgba(255, 255, 255, 0.2);
 }
 .box:hover{
-    background-color: hsla(172, 95%, 18%, 0.7);
+    background-color: hsla(172, 96%, 18%, 0.7);
     
 }
+:host-context(.dark-mode) .box:hover {
+  background-color: #689b8a;
+  color: #d4ede4;
+}
+:host-context(.dark-mode) #model{
+  background-color: #637871;
+  color: #d4ede4;
+}
 #model{
-    background-color: hsla(172, 95%, 18%, 1);
+    background-color: hsla(172, 96%, 18%, 1);
     width: 1400px;
     height:700px;
     margin: 11% 10% 8% 13%; 

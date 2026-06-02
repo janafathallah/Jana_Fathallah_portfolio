@@ -27,9 +27,24 @@ h5 {
     margin: 10px 0 30px 0;
 }
 
+#html.animate {
+  --progress: 70%;
+}
+
+#css.animate {
+  --progress: 60%;
+}
+
+#js.animate {
+  --progress: 80%;
+}
+#html, #css, #js {
+  --progress: 0%;
+  transition: all 1.2s ease;
+}
 .line {
     border-radius: 10px;
-    height: 8px;
+    height: 9px;
 }
 
 .tip {
@@ -37,7 +52,7 @@ h5 {
     top: -25px;
     transform: translateX(-50%);
 
-    background: hsla(172, 95%, 18%, 1);
+    background: hsla(172, 96%, 18%, 1);
     color: white;
 
     padding: 2px 8px;
@@ -46,59 +61,86 @@ h5 {
     font-size: 12px;
     font-weight: bold;
 }
+:host-context(.dark-mode) .tip {
+  background: #689b8a;
+  color: #d4ede4;
+}
 
-@property --progress {
-    syntax: "<percentage>";
-    inherits: false;
-    initial-value: 0%;
+:host-context(.dark-mode) #html, :host-context(.dark-mode) #css, :host-context(.dark-mode) #js, :host-context(.dark-mode) #java, :host-context(.dark-mode) #sql, :host-context(.dark-mode) #angular{
+    background: linear-gradient(to right,
+        #689b8a 0%,
+        #689b8a var(--progress),
+        #d4ede4 var(--progress),
+        #d4ede4 100%);
 }
 
 #html {
+    --target: 70%;
     background: linear-gradient(to right,
-            hsla(172, 95%, 18%, 1) 0%,
-            hsla(172, 95%, 18%, 1) 70%,
-            white 70%,
-            white 100%);
+        hsla(172, 96%, 18%, 1) 0%,
+        hsla(172, 96%, 18%, 1) var(--progress),
+        white var(--progress),
+        white 100%);
 }
-
 #css {
+    --target: 60%;
     background: linear-gradient(to right,
-            hsla(172, 95%, 18%, 1) 0%,
-            hsla(172, 95%, 18%, 1) 60%,
-            white 60%,
-            white 100%);
+        hsla(172, 96%, 18%, 1) 0%,
+        hsla(172, 96%, 18%, 1) var(--progress),
+        white var(--progress),
+        white 100%);
 }
 
 #js {
+    --target: 80%;
     background: linear-gradient(to right,
-            hsla(172, 95%, 18%, 1) 0%,
-            hsla(172, 95%, 18%, 1) 80%,
-            white 80%,
-            white 100%);
+        hsla(172, 96%, 18%, 1) 0%,
+        hsla(172, 96%, 18%, 1) var(--progress),
+        white var(--progress),
+        white 100%);
 }
 
 #angular {
+    --target: 70%;
     background: linear-gradient(to right,
-            hsla(172, 95%, 18%, 1)0%,
-            hsla(172, 95%, 18%, 1)70%,
-            white 70%,
-            white 100%);
+        hsla(172, 96%, 18%, 1) 0%,
+        hsla(172, 96%, 18%, 1) var(--progress),
+        white var(--progress),
+        white 100%);
 }
 
 #sql {
+    --target: 90%;
     background: linear-gradient(to right,
-            hsla(172, 95%, 18%, 1)0%,
-            hsla(172, 95%, 18%, 1)90%,
-            white 90%,
-            white 100%);
+        hsla(172, 96%, 18%, 1) 0%,
+        hsla(172, 96%, 18%, 1) var(--progress),
+        white var(--progress),
+        white 100%);
 }
 
 #java {
+    --target: 90%;
     background: linear-gradient(to right,
-            hsla(172, 95%, 18%, 1)0%,
-            hsla(172, 95%, 18%, 1)90%,
-            white 90%,
-            white 100%);
+        hsla(172, 96%, 18%, 1) 0%,
+        hsla(172, 96%, 18%, 1) var(--progress),
+        white var(--progress),
+        white 100%);
+}
+
+#html,
+#css,
+#js,
+#angular,
+#sql,
+#java {
+  --progress: 0%;
+  animation: fillBar 1.5s ease forwards;
+}
+
+@keyframes fillBar {
+  to {
+    --progress: var(--target);
+  }
 }
 
 #technical {
@@ -142,15 +184,18 @@ h5 {
 #teamwork {
     --target: 80%;
     --progress: 0%;
-    background: conic-gradient(hsla(172, 95%, 18%, 1) 0% var(--progress),
+    background: conic-gradient(hsla(172, 96%, 18%, 1) 0% var(--progress),
             white var(--progress) 100%);
     animation: fillCircle 2s linear forwards;
 }
-
+:host-context(.dark-mode) #teamwork, :host-context(.dark-mode) #communication, :host-context(.dark-mode) #problemSolving, :host-context(.dark-mode) #creativity{
+    background: conic-gradient(#689b8a 0% var(--progress),
+            #d4ede4 var(--progress) 100%);
+}
 #communication {
     --target: 80%;
     --progress: 0%;
-    background: conic-gradient(hsla(172, 95%, 18%, 1) 0% var(--progress),
+    background: conic-gradient(hsla(172, 96%, 18%, 1) 0% var(--progress),
             white var(--progress) 100%);
     animation: fillCircle 2s linear forwards;
 }
@@ -160,7 +205,7 @@ h5 {
     --target: 90%;
     --progress: 0%;
 
-    background: conic-gradient(hsla(172, 95%, 18%, 1) 0% var(--progress),
+    background: conic-gradient(hsla(172, 96%, 18%, 1) 0% var(--progress),
             white var(--progress) 100%);
 
     animation: fillCircle 2s linear forwards;
@@ -169,7 +214,7 @@ h5 {
 #creativity {
     --target: 75%;
     --progress: 0%;
-    background: conic-gradient(hsla(172, 95%, 18%, 1) 0% var(--progress),
+    background: conic-gradient(hsla(172, 96%, 18%, 1) 0% var(--progress),
             white var(--progress) 100%);
     animation: fillCircle 2s linear forwards;
 }
@@ -194,7 +239,9 @@ h5 {
 
     position: absolute;
 }
-
+:host-context(.dark-mode) .circle::before{
+    background: #233831;
+}
 .circle span {
     position: relative;
     z-index: 2;

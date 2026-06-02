@@ -19,7 +19,7 @@
 }
 #image{
     border: solid;
-    border-color: hsla(172, 95%, 18%, 1);
+    border-color: hsla(172, 96%, 18%, 1);
     border-radius: 50%;
     border-width: 2px;
     height: 50px;
@@ -40,7 +40,7 @@ h5{
     font-size: 15px;
 }
 .top{
-    background-color: hsla(172, 95%, 18%, 1);
+    background-color: hsla(172, 96%, 18%, 1);
     color: beige;
     height: 70px;
 }
@@ -51,7 +51,7 @@ h5{
     border-width: 1px;
     margin: auto 30px 10px 10px;
     background-color: white;
-    color:  hsla(172, 95%, 18%, 1);
+    color:  hsla(172, 96%, 18%, 1);
 }
 .reply{
     border-style: solid;
@@ -60,12 +60,12 @@ h5{
     border-width: 1px;
     margin: auto 10px 10px auto;
     background-color: rgb(164, 218, 210);
-    color:  hsla(172, 95%, 18%, 1);
+    color:  hsla(172, 96%, 18%, 1);
 }
 .question{
     border-style: solid;
     border-radius: 15px;
-    border-color:  hsla(172, 95%, 18%, 1);
+    border-color:  hsla(172, 96%, 18%, 1);
     width: fit-content;
     margin: auto auto 10px 10px;
     cursor: pointer;
@@ -90,7 +90,7 @@ span{
     width: fit-content;
     border-width: 1px;
     margin: auto 30px 10px 10px;
-    background-color: hsla(172, 95%, 18%, 1);
+    background-color: hsla(172, 96%, 18%, 1);
     color:  rgb(255, 255, 255);
     cursor: pointer;
 }

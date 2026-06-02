@@ -10,16 +10,16 @@ body{
   background-color: rgb(219, 204, 182);
 }
 body.dark-mode {
-  background-color: hsla(172, 95%, 18%, 1);
-  color: rgb(255, 255, 255);
+  background-color: #233831;
+  color: #d4ede4;
 }
 body.dark-mode h2 {
-  color: rgb(86, 184, 171);
+  color: #689b8a;
 }
 h2{
     font-family: Title;
     font-weight: 1000;
-    color: hsla(172, 95%, 18%, 1);
+    color: #025a4e;
     font-size: 40px;
 }
 h3,h4,h5,h6,label,p,li{

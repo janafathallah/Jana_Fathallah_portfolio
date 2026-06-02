@@ -4,6 +4,11 @@
     padding-top: 10px;
     transition: transform 0.2s ease;    
 }
+:host-context(.dark-mode) .box{
+    border-color: #689b8a;
+    border-width: 1px;
+    border-style: solid;
+}
 .box:hover{
     transform: scale(1.03);
 }

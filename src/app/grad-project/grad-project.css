@@ -30,6 +30,9 @@ h2{
     background-size: 500px;
     animation: animate 4s ease-in-out infinite;
 }
+:host-context(.dark-mode) .face::before{
+    background-image: url("/assets/man (7).png");
+}
 
 @keyframes animate{
     0%,100%{
@@ -46,10 +49,14 @@ h2{
     left: 0;
     width: 100%;
     height: 8px;
-    background:hsla(172, 95%, 18%, 0.8);
+    background:hsla(172, 96%, 18%, 0.8);
     border-radius: 8px;
-    filter: drop-shadow(0 0 20px hsla(172, 95%, 18%, 0.8)) drop-shadow(0 0 60px hsla(172, 95%, 18%, 0.8));
+    filter: drop-shadow(0 0 20px hsla(172, 96%, 18%, 0.8)) drop-shadow(0 0 60px hsla(172, 96%, 18%, 0.8));
     animation: animate_line 4s ease-in-out infinite;
+}
+:host-context(.dark-mode) .face::after{
+    background:#689b8a;
+    filter: drop-shadow(0 0 20px #689b8a) drop-shadow(0 0 60px #689b8a);
 }
 @keyframes animate_line{
     0%,100%{
@@ -87,11 +94,14 @@ p{
     width:400px;
     height: 100px;
     border-radius: 15px;
-    background-color: hsla(172, 95%, 18%, 0.8);
+    background-color: #025a4e;
     margin-left: 550px;
     margin-top: 70px;
     cursor: pointer;
     align-items: center;
+}
+:host-context(.dark-mode) #button{
+    background-color: #689b8a;
 }
 img{
     width: 80px;
