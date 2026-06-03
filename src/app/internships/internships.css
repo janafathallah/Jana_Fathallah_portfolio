@@ -67,6 +67,7 @@ label{
     color: hsla(36, 31%, 90%, 1);
     -webkit-animation: swing-in-top-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 	        animation: swing-in-top-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            
 }
 span{
     font-size: 25px;
@@ -124,6 +125,39 @@ span{
         padding-bottom: 80px;
     }
 
+    #model {
+        width: calc(100vw - 20px);
+        height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    /* 🔥 FIX MODAL CONTENT LAYOUT */
+    #model .row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .col-1,
+    .col-5 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #model h4 {
+        text-align: center;
+        font-size: clamp(20px, 5vw, 28px);
+    }
+
+    #model h5,
+    #model label {
+        font-size: 16px;
+    }
+
     h2 {
         margin-top: 40px;
         margin-bottom: 20px;
@@ -156,7 +190,6 @@ span{
         font-size: 16px;
     }
 
-
     .col-5 {
         margin-left: 0;
     }
@@ -167,6 +200,38 @@ span{
     #Internships {
         height: auto;
         padding-bottom: 100px;
+    }
+
+    #model {
+        width: min(700px, 90vw);
+        height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        margin: 40px auto;
+        padding: 15px;
+    }
+
+    /* 🔥 FIX MODAL CONTENT */
+    #model .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .col-5 {
+        margin-left: 0;
+        flex: 1;
+    }
+
+    #model h4 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    #model h5,
+    #model label {
+        font-size: 18px;
     }
 
     h2 {
@@ -197,16 +262,36 @@ span{
         font-size: 18px;
     }
 
-
     .col-5 {
         margin-left: 50px;
     }
 }
-
 @media (min-width: 900px) and (max-width: 1199px) {
 
     #Internships {
         height: auto;
+    }
+
+    #model {
+        width: min(1000px, 90vw);
+        height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        margin: 60px auto;
+        padding: 15px;
+    }
+
+    #model h4 {
+        font-size: 26px;
+    }
+
+    #model h5,
+    #model label {
+        font-size: 18px;
+    }
+
+    .col-5 {
+        margin-left: 50px;
     }
 
     h2 {
@@ -232,7 +317,6 @@ span{
         margin-left: 80px;
         font-size: 20px;
     }
-
 
     .col-5 {
         margin-left: 100px;
