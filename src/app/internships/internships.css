@@ -116,3 +116,125 @@ span{
     opacity: 1;
   }
 }
+
+@media (max-width: 599px) {
+
+    #Internships {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: clamp(22px, 6vw, 34px);
+    }
+
+    h3 {
+        font-size: clamp(16px, 4vw, 22px);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: clamp(20px, 5vw, 28px);
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .box {
+        width: calc(100vw - 20px);
+        height: auto;
+        padding: 30px 10px;
+        margin: 20px auto;
+    }
+
+    label {
+        margin-left: 20px;
+        width: auto;
+        font-size: 16px;
+    }
+
+
+    .col-5 {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+
+    #Internships {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    h2 {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .box {
+        width: min(700px, 90vw);
+        height: auto;
+        padding: 40px 20px;
+        margin: 20px auto;
+    }
+
+    label {
+        margin-left: 40px;
+        font-size: 18px;
+    }
+
+
+    .col-5 {
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+
+    #Internships {
+        height: auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    .box {
+        width: min(900px, 80vw);
+        height: 150px;
+        margin: 30px auto;
+    }
+
+    label {
+        margin-left: 80px;
+        font-size: 20px;
+    }
+
+
+    .col-5 {
+        margin-left: 100px;
+    }
+}

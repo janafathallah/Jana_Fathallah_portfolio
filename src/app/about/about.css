@@ -17,3 +17,75 @@ p{
     margin: 120px auto 0 auto;
     text-align: center;
 }
+@media (max-width: 599px) {
+
+    #About {
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        text-align: center;
+        font-size: clamp(22px, 6vw, 34px);
+    }
+
+    #page {
+        padding-top: 40px;
+        margin-right: 0;
+    }
+
+    p {
+        width: calc(100vw - 30px);
+        margin: 60px auto 0 auto;
+        font-size: clamp(16px, 4vw, 22px);
+        text-align: center;
+    }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+
+    #About {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    h2 {
+        margin-top: 50px;
+        text-align: center;
+        font-size: clamp(26px, 4vw, 38px);
+    }
+
+    #page {
+        padding-top: 60px;
+    }
+
+    p {
+        width: min(700px, 90vw);
+        margin: 80px auto 0 auto;
+        font-size: clamp(18px, 2.5vw, 26px);
+        text-align: center;
+    }
+} 
+@media (min-width: 900px) and (max-width: 1199px) {
+
+    #About {
+        height: auto;
+    }
+
+    h2 {
+        margin-top: 60px;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    #page {
+        padding-top: 70px;
+    }
+
+    p {
+        width: min(900px, 80vw);
+        margin: 100px auto 0 auto;
+        font-size: 26px;
+        text-align: center;
+    }
+}

@@ -31,8 +31,8 @@ h2{
     border-color: #233831;
     border-radius: 50%;
     border-width: 1px;
-    height: 450px;
-    width: 450px;
+    width: min(450px, 90vw);
+    height: min(450px, 90vw);
     background-image: url("/assets/self-image.jpg");
     background-size: cover;          /* fills the circle */
     background-position: center;     /* centers the image */
@@ -45,38 +45,105 @@ i{
     font-weight: 300;
     font-size: 35px;
 }
+@media (max-width: 599px) {
 
-@media (max-width: 600px) {
-    #Home{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+    #Home {
+        width: 100vw;
+        height: auto;
+        padding-top: 120px;
+    }
+
+    #name {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        width: calc(100vw - 20px);
+        margin: 5px auto;
+        font-size: clamp(18px, 5vw, 32px);
+    }
+
+    #image {
+        margin: 20px auto;
+        width: min(300px, 80vw);
+        height: min(300px, 80vw);
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+        margin: 10px 5px;
+    }
+
+    i {
+        font-size: 28px;
+    }
 }
-.icon{
-    height: 10px;
-    width: 10px;
-    margin: 5% 0 auto 3%;
+@media (min-width: 600px) and (max-width: 899px) {
+
+    #Home {
+        width: 100vw;
+        height: auto;
+        padding-top: 120px;
+    }
+
+    #name {
+        margin-left: 40px;
+        margin-top: 100px;
+    }
+
+    h2 {
+        width: calc(100vw - 100px);
+        margin: 8px 0;
+        font-size: clamp(22px, 3vw, 36px);
+    }
+
+    #image {
+        margin-top: 100px;
+        width: min(350px, 45vw);
+        height: min(350px, 45vw);
+    }
+
+    .icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    i {
+        font-size: 32px;
+    }
 }
-.icon:hover{
-    transform: scale(1.1);
+@media (min-width: 900px) and (max-width: 1199px) {
+
+    #Home {
+        width: 100vw;
+    }
+
+    #name {
+        margin-left: 80px;
+        margin-top: 220px;
+    }
+
+    h2 {
+        width: min(600px, 50vw);
+        font-size: clamp(24px, 2vw, 36px);
+    }
+
+    #image {
+        margin-top: 180px;
+        width: min(400px, 40vw);
+        height: min(400px, 40vw);
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    i {
+        font-size: 35px;
+    }
 }
-h2{
-    margin-top: 10%;
-    margin: 10% 2%;
-    min-width: 20vh;
-}
-#name{
-    margin-left: 30%;
-    margin-top: 20%;
-}
-#image{
-    margin-top: 1%;
-    height: 200px;
-    margin-left: 60%;
-    width: 200px;
-}
-i{
-    font-weight: 300;
-    font-size: 35px;
-}
-}
+

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
-
+import { BreakpointObserver } from '@angular/cdk/layout';
 @Component({
   selector: 'app-panel',
   standalone: false,
@@ -7,6 +7,8 @@ import { Component, EventEmitter, HostListener, Input, Output } from '@angular/c
   styleUrl: './panel.css',
 })
 export class Panel {
+
+
   @Output() component = new EventEmitter<string>();
   @Output() contact = new EventEmitter<boolean>();
   @Output() mode = new EventEmitter<boolean>();
