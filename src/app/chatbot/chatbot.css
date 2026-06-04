@@ -31,6 +31,14 @@
     margin-left: 10px;
     margin-top: 10px;
 }
+:host-context(.dark-mode) .top{
+    background-color: #689b8a;
+    color: #d4ede4;
+}
+:host-context(.dark-mode) .contact{
+    background-color: #233831;
+    border-color: #689b8a;
+}
 h4{
     margin-bottom: 0;
     margin-top: 10px;
@@ -93,4 +101,318 @@ span{
     background-color: hsla(172, 96%, 18%, 1);
     color:  rgb(255, 255, 255);
     cursor: pointer;
+}
+.typing span {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: hsla(172, 96%, 18%, 1);
+  animation: bounce 0.8s ease-in-out infinite;
+  margin-left: 0 !important;
+}
+
+.typing {
+  display: flex;
+  gap: 1px;
+  padding: 10px 8px;
+  align-items: center;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.typing span:nth-child(1) { animation-delay: 0s; }
+.typing span:nth-child(2) { animation-delay: 0.15s; }
+.typing span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+@media (max-width: 599px) {
+
+  /* CHAT CONTAINER */
+  #chat {
+    width: 260px;
+    height: 390px;
+  }
+
+  /* TOP BAR */
+  .top {
+    height: 60px;
+  }
+
+  /* AVATAR IMAGE */
+  #image {
+    width: 38px;
+    height: 38px;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+
+  /* HEADINGS */
+  h4 {
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    font-size: 11px;
+    margin-top: 0;
+  }
+
+  /* TEXT INSIDE BUBBLES */
+  p {
+    font-size: 12px;
+    margin: 6px 6px;
+  }
+
+  /* CHAT BUBBLES */
+  .message,
+  .reply,
+  .contact,
+  .question {
+    font-size: 12px;
+    border-radius: 12px;
+  }
+
+  .message,
+  .reply {
+    padding: 6px 8px;
+  }
+
+  .question {
+    padding: 6px 8px;
+  }
+
+  .contact {
+    padding: 6px 8px;
+  }
+
+  /* ICONS / BUTTONS */
+  .top span {
+    margin-left: 2px;
+    font-size: 20px;
+}
+
+  /* SCROLL AREA */
+  .bottom {
+    padding: 8px;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
+
+  #chat {
+    width: 320px;
+    height: 480px;
+  }
+
+  .top {
+    height: 65px;
+  }
+
+  #image {
+    width: 42px;
+    height: 42px;
+  }
+
+  h4 { font-size: 15px; }
+  h5 { font-size: 12px; }
+
+  p { font-size: 13px; }
+
+  .message,
+  .reply,
+  .contact,
+  .question {
+    font-size: 13px;
+  }
+
+    .top span {
+    margin-left: 2px;
+    font-size: 20px;
+}
+}
+@media (min-width: 600px) and (max-width: 899px) and (orientation: landscape) {
+
+  #chat {
+    width: 300px;
+    height: 70vh; /* key fix */
+    max-height: 420px; /* prevents it from becoming too tall */
+  }
+
+  .top {
+    height: 55px;
+  }
+
+  #image {
+    width: 38px;
+    height: 38px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 11px;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 6px;
+  }
+
+  .message,
+  .reply,
+  .contact,
+  .question {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+    .top span {
+    margin-left: 2px;
+    font-size: 20px;
+}
+
+  .bottom {
+    padding: 6px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) and (orientation: portrait) {
+
+  #chat {
+    width: 360px;
+    height: 540px;
+  }
+
+  .top {
+    height: 68px;
+  }
+
+  #image {
+    width: 46px;
+    height: 46px;
+  }
+
+  h4 { font-size: 16px; }
+  h5 { font-size: 13px; }
+
+  p {
+    font-size: 14px;
+    margin: 8px 10px;
+  }
+
+  .message,
+  .reply,
+  .contact,
+  .question {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .top span {
+    font-size: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+  .bottom {
+    padding: 10px;
+  }
+
+    .top span {
+    margin-left: 7px;
+    font-size: 20px;
+}
+}
+@media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) {
+
+  #chat {
+    width: 380px;
+    height: 70vh;
+    max-height: 520px;
+  }
+
+  .top {
+    height: 60px;
+  }
+
+  #image {
+    width: 42px;
+    height: 42px;
+  }
+
+  h4 { font-size: 15px; }
+  h5 { font-size: 12px; }
+
+  p {
+    font-size: 13px;
+    margin: 7px 9px;
+  }
+
+  .message,
+  .reply,
+  .contact,
+  .question {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
+
+  .top span {
+    font-size: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+  .bottom {
+    padding: 8px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) and (orientation: landscape) {
+
+#chat {
+    width: 420px;
+    height: 72vh;
+    max-height: 560px;
+}
+
+.top {
+    height: 65px;
+}
+
+#image {
+    width: 46px;
+    height: 46px;
+}
+
+h4 { font-size: 16px; }
+h5 { font-size: 13px; }
+
+p {
+    font-size: 14px;
+    margin: 8px 10px;
+}
+
+.message,
+.reply,
+.contact,
+.question {
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+.top span {
+    font-size: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.bottom {
+    padding: 10px;
+}
 }

@@ -117,33 +117,83 @@ i{
 }
 @media (min-width: 900px) and (max-width: 1199px) {
 
-    #Home {
-        width: 100vw;
-    }
+#Home {
+    width: 100vw;
+    height: auto;
+    padding: 120px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    #name {
-        margin-left: 80px;
-        margin-top: 220px;
-    }
+/* LEFT SIDE TEXT BLOCK */
+#name {
+    margin: 0;
+    max-width: 50%;
+}
 
-    h2 {
-        width: min(600px, 50vw);
-        font-size: clamp(24px, 2vw, 36px);
-    }
+/* TEXT */
+h2 {
+    width: 100%;
+    font-size: clamp(24px, 2vw, 34px);
+    margin: 10px 0;
+}
 
-    #image {
-        margin-top: 180px;
-        width: min(400px, 40vw);
-        height: min(400px, 40vw);
-    }
+/* IMAGE */
+#image {
+    margin: 0;
+    width: min(380px, 35vw);
+    height: min(380px, 35vw);
+}
 
-    .icon {
-        width: 40px;
-        height: 40px;
-    }
+/* ICONS */
+.icon {
+    width: 40px;
+    height: 40px;
+}
 
-    i {
-        font-size: 35px;
-    }
+i {
+    font-size: 32px;
+}
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+#Home {
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+/* LEFT SIDE (text block) */
+#name {
+    margin-left: 60px;   /* reduced from 160px vibe */
+    margin-top: 0;
+}
+
+/* HEADINGS */
+h2 {
+    width: 650px;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+/* IMAGE */
+#image {
+    margin-top: 0;
+    width: min(420px, 38vw);
+    height: min(420px, 38vw);
+}
+
+/* ICONS */
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+i {
+    font-size: 34px;
+}
 }
 

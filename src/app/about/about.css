@@ -89,3 +89,26 @@ p{
         text-align: center;
     }
 }
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+#About {
+    height: auto;
+}
+
+/* make paragraph adapt instead of fixed 1000px */
+p {
+    width: min(900px, 75vw);
+    margin: 90px auto 0 auto;
+    font-size: 28px;
+}
+
+/* slight spacing correction */
+h2 {
+    margin-top: 60px;
+    font-size: 38px;
+}
+
+#page {
+    padding-top: 60px;
+}
+}

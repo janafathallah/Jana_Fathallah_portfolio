@@ -29,11 +29,27 @@
                     <p>{{m.text}}</p>
                 </div>
                 <div *ngIf="m.type=='bot' && m.text=='Contact me'" class="contact" (click)="contactMe()">
-                    <div *ngIf="m.text=='typing'" class="typing"></div>
+                    <div *ngIf="m.text=='typing'" class="typing">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <p *ngIf="m.text!='typing'">{{m.text}}</p>
                 </div>
-                <div *ngIf="m.type=='bot' && m.text!='Contact me'" class="message" #elseblock>
-                    <div *ngIf="m.text=='typing'" class="typing"></div>
+                <div *ngIf="m.type=='bot' && m.text=='Download Bachelor Thesis Paper'" class="contact" (click)="downloadPaper()">
+                    <div *ngIf="m.text=='typing'" class="typing">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p *ngIf="m.text!='typing'">{{m.text}}</p>
+                </div>
+                <div *ngIf="m.type=='bot' && m.text!='Contact me' && m.text!='Download Bachelor Thesis Paper'" class="message" #elseblock>
+                    <div *ngIf="m.text=='typing'" class="typing">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <p *ngIf="m.text!='typing'">{{m.text}}</p>
                 </div>
             </div>
