@@ -56,18 +56,30 @@ label{
   background-color: #637871;
   color: #d4ede4;
 }
-#model{
-    background-color: hsla(172, 96%, 18%, 1);
-    width: 1400px;
-    height:700px;
-    margin: 11% 10% 8% 13%; 
+#model {
+    position: fixed;
+
+    top: calc(200px + 1vh);
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 99999;
+
+    width: min(1400px, 90vw);
+    height: 700px;
+    max-height: 80vh;
+
+    overflow-y: auto;
+
     padding: 10px;
     border-radius: 15px;
+
     display: block;
+
+    background-color: hsla(172, 96%, 18%, 1);
     color: hsla(36, 31%, 90%, 1);
-    -webkit-animation: swing-in-top-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-	        animation: swing-in-top-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-            
+
+    animation: modalFadeScale 0.35s ease-out;
 }
 span{
     font-size: 25px;
@@ -85,37 +97,15 @@ span{
     display: flex;
     align-items: center;
 }
-@-webkit-keyframes swing-in-top-fwd {
-  0% {
-    -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    opacity: 1;
-  }
-}
-@keyframes swing-in-top-fwd {
-  0% {
-    -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    opacity: 1;
-  }
+@keyframes modalFadeScale {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
 }
 
 @media (max-width: 599px) {
@@ -123,25 +113,14 @@ span{
     #Internships {
         height: auto;
         padding-bottom: 80px;
+        padding-top: 120px;
     }
 
-#model {
-    position: fixed;
-    top: 38%;              /* tiny move up */
-    left: 1%;              /* more left */
-    transform: translate(-50%, -50%);
-
-    z-index: 99999;
-
+  #model {
+    top: calc(150px + 1vh);
     width: calc(100vw - 20px);
-    max-height: 66vh;      /* a bit less height */
-
-    overflow-y: auto;
-
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
-}
+    height: auto;
+  }
 
     /* 🔥 FIX MODAL CONTENT LAYOUT */
     #model .row {
@@ -211,22 +190,11 @@ span{
 }
 
 #model {
-    position: fixed;
-    top: 38%;
-    left: 1%;
-    transform: translate(-50%, -50%);
-
-    z-index: 99999;
-
+    top: calc(160px + 1vh);
     width: min(700px, 92vw);
-    max-height: 66vh;
+    height: auto;
+  }
 
-    overflow-y: auto;
-
-    padding: 12px;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 /* SAME STRUCTURE FIX */
 #model .row {
@@ -295,23 +263,11 @@ label {
     height: auto;
 }
 
-#model {
-    position: fixed;
-    top: 38%;
-    left: 1%;
-    transform: translate(-50%, -50%);
-
-    z-index: 99999;
-
-    width: min(1000px, 90vw);
-    max-height: 66vh;
-
-    overflow-y: auto;
-
-    padding: 15px;
-    margin: 0;
-    box-sizing: border-box;
-}
+  #model {
+    top: calc(170px + 1vh);
+    width: min(900px, 85vw);
+    height: auto;
+  }
 
 /* SAME STRUCTURE FIX */
 #model .row {
@@ -374,24 +330,10 @@ label {
 }
 
 #model {
-    position: fixed;
-
-    top: 20%;
-    left: 15%;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 99999;
-
+    top: calc(120px + 1vh);
     width: min(550px, 80vw);
-    max-height: 70vh;
-
-    overflow-y: auto;
-
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
-}
+    height: auto;
+  }
 
 /* STRUCTURE */
 #model .row {
@@ -459,25 +401,11 @@ label {
     height: auto;
 }
 
-#model {
-    position: fixed;
-
-    top: 32%;     /* 🔥 tiny bit up */
-    left: 18%;    /* 🔥 more left */
-
-    transform: translate(-50%, -50%);
-
-    z-index: 99999;
-
+ #model {
+    top: calc(140px + 1vh);
     width: min(650px, 70vw);
-    max-height: 65vh;
-
-    overflow-y: auto;
-
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
-}
+    height: auto;
+  }
 
 /* STRUCTURE */
 #model .row {
@@ -545,25 +473,11 @@ label {
     height: auto;
 }
 
-#model {
-    position: fixed;
-
-    top: 20%;
-    left: 20%;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 99999;
-
+  #model {
+    top: calc(150px + 1vh);
     width: min(850px, 60vw);
-    max-height: 70vh;
-
-    overflow-y: auto;
-
-    padding: 12px;
-    margin: 0;
-    box-sizing: border-box;
-}
+    height: auto;
+  }
 
 /* STRUCTURE */
 #model .row {

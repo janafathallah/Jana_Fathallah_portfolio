@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, EventEmitter, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-chatbot',
   standalone: false,
@@ -63,7 +63,7 @@ export class Chatbot {
       this.addBotMessages([
         'Hello!',
         'Thanks for saying hi 😁',
-        'I hope youve enjoyed browsing my work',
+        'I hope youv’e enjoyed browsing my work',
         'Can I help you with anything else?'
       ]);
 

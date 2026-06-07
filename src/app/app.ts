@@ -22,6 +22,7 @@ export class App {
     if(name=='Skills'){
       this.skillsComponent.animateAll();
     }
+    this.onChat(true);
   }
 
   onContact(open: boolean) {

@@ -39,4 +39,22 @@
         </div>
 
     </div>
+    <div class="modal-backdrop" *ngIf="showProjectModal">
+    <div class="project-modal">
+        <h3>Choose a destination</h3>
+        <p>Where would you like to view this project?</p>
+
+        <button (click)="goToWebsite();showProjectModal = false">
+            🌐 Live Demo
+        </button>
+
+        <button (click)="goToGithub();showProjectModal = false">
+            💻 GitHub Repository
+        </button>
+
+        <button (click)="showProjectModal = false">
+            Close
+        </button>
+    </div>
+</div>
 </div>

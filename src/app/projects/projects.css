@@ -93,11 +93,94 @@ p{
     margin-top: 0px;
     
 }
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.project-modal {
+  background-color: rgb(219, 204, 182);
+  border: 2px solid #025a4e;
+  border-radius: 16px;
+
+  width: 320px;
+  padding: 25px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-modal h3 {
+  font-family: Title;
+  font-size: 22px;
+  color: #025a4e;
+  margin-bottom: 8px;
+}
+
+.project-modal p {
+  font-family: Text;
+  color: #233831;
+  margin-bottom: 20px;
+}
+
+.project-modal button {
+  width: 100%;
+  margin: 8px 0;
+
+  padding: 12px;
+  border-radius: 10px;
+
+  border: 2px solid #025a4e;
+  background: transparent;
+
+  color: #025a4e;
+  font-family: Text;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.project-modal button:hover {
+  background: #025a4e;
+  color: rgb(219, 204, 182);
+}
+body.dark-mode .project-modal {
+  background-color: #233831;
+  border-color: #689b8a;
+}
+
+body.dark-mode .project-modal h3 {
+  color: #689b8a;
+}
+
+body.dark-mode .project-modal p {
+  color: #d4ede4;
+}
+
+body.dark-mode .project-modal button {
+  border-color: #689b8a;
+  color: #d4ede4;
+}
+
+body.dark-mode .project-modal button:hover {
+  background: #689b8a;
+  color: #233831;
+}
 @media (max-width: 599px) {
 
 #Projects {
     height: auto;
     padding-bottom: 80px;
+    padding-top: 120px;
 }
 
 h2 {

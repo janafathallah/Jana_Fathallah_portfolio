@@ -17,84 +17,101 @@ export class Skills  implements AfterViewInit {
     this.createObserver();
   }
 
-  createObserver() {
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          if (!this.hasAnimated) {
-            this.hasAnimated = true;
-            setTimeout(() => {
-              this.animateAll();
-            }, 80);
-          }
-        }
-        else {
-          this.hasAnimated = false;
-          this.resetAll();
-        }
-      }
-    }, {
-      threshold: 0.3
-    });
-    observer.observe(this.el.nativeElement);
-  }
+createObserver() {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        if (!this.hasAnimated) {
+          this.hasAnimated = true;
 
-  animateAll() {
-    this.resetAll();
-    this.animateGroup(
-      ['html', 'css', 'js', 'angular', 'sql', 'java'],
-      15,
-      300
-    );
-    this.animateGroup(
-      ['teamwork', 'communication', 'problemSolving', 'creativity'],
-      20,
-      500
-    );
-  }
-
-  animateGroup(ids: string[], speed: number, pause: number) {
-    let i = 0;
-    const next = () => {
-      if (i >= ids.length) return;
-      const el = document.getElementById(ids[i++]);
-      if (!el) {
-        next();
-        return;
+          setTimeout(() => {
+            this.animateAll();
+          }, 80);
+        }
+      } else {
+        this.hasAnimated = false;
+        this.resetAll();
       }
+    }
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(this.el.nativeElement);
+}
+
+animateAll() {
+  this.resetAll();
+
+  this.animateGroup(
+  ['html', 'css', 'js', 'angular', 'sql', 'java'],
+  30,
+  500
+);
+
+  this.animateGroup(
+    ['teamwork', 'communication', 'problemSolving', 'creativity'],
+    30,
+    500
+  );
+}
+
+animateGroup(ids: string[], speed: number, delayBetweenStarts: number) {
+  for (let i = 0; i < ids.length; i++) {
+    const id = ids[i];
+
+    setTimeout(() => {
+      const el = document.getElementById(id);
+
+      if (!el) return;
+
       const target = parseInt(
         getComputedStyle(el).getPropertyValue('--target')
       );
+
       let current = 0;
+
       const interval = setInterval(() => {
-        current++;
-        el.style.setProperty('--progress', current + '%');
         if (current >= target) {
           clearInterval(interval);
-          setTimeout(next, pause);
+          return;
         }
+
+        current++;
+        el.style.setProperty('--progress', `${current}%`);
       }, speed);
+
       this.intervals.push(interval);
-    };
-    next();
+    }, i * delayBetweenStarts);
+  }
+}
+resetAll() {
+  const ids = [
+    'html',
+    'css',
+    'js',
+    'angular',
+    'sql',
+    'java',
+    'teamwork',
+    'communication',
+    'problemSolving',
+    'creativity'
+  ];
+
+  for (const interval of this.intervals) {
+    clearInterval(interval);
   }
 
-  resetAll() {
-    const ids = [
-      'html', 'css', 'js', 'angular', 'sql', 'java',
-      'teamwork', 'communication', 'problemSolving', 'creativity'
-    ];
-    for (const i of this.intervals) {
-      clearInterval(i);
-    }
-    this.intervals = [];
-    for (const id of ids) {
-      const el = document.getElementById(id);
+  this.intervals = [];
 
-      if (el) {
-        el.style.setProperty('--progress', '0%');
-        el.style.animation = 'none';
-      }
+  for (const id of ids) {
+    const el = document.getElementById(id);
+
+    if (el) {
+      el.style.setProperty('--progress', '0%');
+      el.style.animation = 'none';
     }
   }
+}
 }

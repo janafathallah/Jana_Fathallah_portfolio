@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { Intern } from '../service/intern';
 
 @Component({
@@ -14,6 +14,7 @@ export class Internships {
   status = false;
   showModal = false;
 
+  
   onClick(company: string) {
     this.internship = this.service.internships.find(
       (x: { company: string }) => x.company == company
