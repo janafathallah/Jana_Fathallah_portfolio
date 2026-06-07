@@ -25,7 +25,7 @@ ul {
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
+    padding-left: 1rem;
     transition: background-color 0.3s ease;
     align-items: center;
     justify-content: center;
@@ -34,7 +34,7 @@ ul {
 }
 
 li {
-    margin: min(10px, 2vw) min(10px, 2vw) min(10px, 2vw) min(22px, 3vw);
+    margin: min(10px, 2vw) min(15px, 2vw) min(10px, 2vw) min(10px, 2vw);
     cursor: pointer;
 }
 
