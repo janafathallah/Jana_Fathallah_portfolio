@@ -172,25 +172,25 @@ p {
     color: rgb(219, 204, 182);
 }
 
-body.dark-mode .project-modal {
+:host-context(.dark-mode) .project-modal {
     background-color: #233831;
     border-color: #689b8a;
 }
 
-body.dark-mode .project-modal h3 {
+:host-context(.dark-mode) .project-modal h3 {
     color: #689b8a;
 }
 
-body.dark-mode .project-modal p {
+:host-context(.dark-mode) .project-modal p {
     color: #d4ede4;
 }
 
-body.dark-mode .project-modal button {
+:host-context(.dark-mode) .project-modal button {
     border-color: #689b8a;
     color: #d4ede4;
 }
 
-body.dark-mode .project-modal button:hover {
+:host-context(.dark-mode) .project-modal button:hover {
     background: #689b8a;
     color: #233831;
 }
