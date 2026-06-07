@@ -14,19 +14,22 @@
                 <div class="col">
                     <div class="box" id="box2" (click)="onParking()">
                         <h3>Smart Parking System</h3>
-                        <p>Smart parking system for managing parking activity, vehicle tracking, and space allocation across multiple buildings.</p>
+                        <p>Smart parking system for managing parking activity, vehicle tracking, and space allocation
+                            across multiple buildings.</p>
                         <img src="/assets/car-parking.png" alt="parking" id="parking">
                     </div>
                     <div class="box" id="box3" (click)="onEmployee()">
                         <h3>Employee Management System</h3>
-                        <p>CRUD-based management system for handling employees, projects, and project assignments with API integration.</p>
+                        <p>CRUD-based management system for handling employees, projects, and project assignments with
+                            API integration.</p>
                         <img src="/assets/process.png" alt="employee" id="employee">
                     </div>
                 </div>
                 <div class="col">
                     <div class="box" id="box4" (click)="onDatabase()">
                         <h3>Telecome Database System</h3>
-                        <p>Full database-driven telecom management system built with SQL and a connected frontend interface.</p>
+                        <p>Full database-driven telecom management system built with SQL and a connected frontend
+                            interface.</p>
                         <img alt="database" src="/assets/database.png" id="database">
                     </div>
                 </div>
@@ -40,21 +43,21 @@
 
     </div>
     <div class="modal-backdrop" *ngIf="showProjectModal">
-    <div class="project-modal">
-        <h3>Choose a destination</h3>
-        <p>Where would you like to view this project?</p>
+        <div class="project-modal">
+            <h3>Choose a destination</h3>
+            <p>Where would you like to view this project?</p>
 
-        <button (click)="goToWebsite();showProjectModal = false">
-            🌐 Live Demo
-        </button>
+            <button (click)="goToWebsite();showProjectModal = false">
+                🌐 Live Demo
+            </button>
 
-        <button (click)="goToGithub();showProjectModal = false">
-            💻 GitHub Repository
-        </button>
+            <button (click)="goToGithub();showProjectModal = false">
+                💻 GitHub Repository
+            </button>
 
-        <button (click)="showProjectModal = false">
-            Close
-        </button>
+            <button (click)="showProjectModal = false">
+                Close
+            </button>
+        </div>
     </div>
-</div>
 </div>

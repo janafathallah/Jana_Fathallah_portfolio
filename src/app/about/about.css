@@ -1,22 +1,26 @@
-#About{
+#About {
     height: 900px;
-    
+
 }
-h2{
-    display:flex;
+
+h2 {
+    display: flex;
     justify-content: center;
     margin-top: 70px;
 }
-#page{
+
+#page {
     margin-right: 0px;
     padding-top: 70px;
 }
-p{
+
+p {
     font-size: 30px;
     width: 1000px;
     margin: 120px auto 0 auto;
     text-align: center;
 }
+
 @media (max-width: 599px) {
 
     #About {
@@ -43,6 +47,7 @@ p{
         text-align: center;
     }
 }
+
 @media (min-width: 600px) and (max-width: 899px) {
 
     #About {
@@ -66,7 +71,8 @@ p{
         font-size: clamp(18px, 2.5vw, 26px);
         text-align: center;
     }
-} 
+}
+
 @media (min-width: 900px) and (max-width: 1199px) {
 
     #About {
@@ -90,26 +96,25 @@ p{
         text-align: center;
     }
 }
+
 @media (min-width: 1200px) and (max-width: 1399px) {
 
-#About {
-    height: auto;
-}
+    #About {
+        height: auto;
+    }
 
-/* make paragraph adapt instead of fixed 1000px */
-p {
-    width: min(900px, 75vw);
-    margin: 90px auto 0 auto;
-    font-size: 28px;
-}
+    p {
+        width: min(900px, 75vw);
+        margin: 90px auto 0 auto;
+        font-size: 28px;
+    }
 
-/* slight spacing correction */
-h2 {
-    margin-top: 60px;
-    font-size: 38px;
-}
+    h2 {
+        margin-top: 60px;
+        font-size: 38px;
+    }
 
-#page {
-    padding-top: 60px;
-}
+    #page {
+        padding-top: 60px;
+    }
 }

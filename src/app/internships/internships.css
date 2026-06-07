@@ -1,61 +1,73 @@
-#Internships{
+#Internships {
     height: 1300px;
 }
-#container{
+
+#container {
     display: flex;
     justify-content: center;
 }
-h2{
+
+h2 {
     margin-top: 70px;
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
 }
-h3{
+
+h3 {
     display: flex;
     justify-content: center;
     margin: auto auto 5% auto;
     font-size: x-large;
 }
-h4{
+
+h4 {
     display: flex;
     justify-content: center;
     margin: 4% auto 10% auto;
     font-size: xx-large;
     font-weight: 500;
 }
-h6{
+
+h6 {
     font-size: 25px;
 }
-label{
+
+label {
     font-weight: 500;
     width: 190px;
     margin: auto auto auto 80px;
     font-size: 20px;
 }
-.box{
+
+.box {
 
     border-radius: 15px;
     border-width: 5px;
     width: 1100px;
-    height:150px;
+    height: 150px;
     margin-top: 30px;
     padding-top: 60px;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.2);
 }
-.box:hover{
-    background-color: hsla(172, 96%, 18%, 0.7);
-    
+
+.box:hover {
+    background-color: #025a4e;
+    color: rgb(219, 204, 182);
+
 }
+
 :host-context(.dark-mode) .box:hover {
-  background-color: #689b8a;
-  color: #d4ede4;
+    background-color: #689b8a;
+    color: #d4ede4;
 }
-:host-context(.dark-mode) #model{
-  background-color: #637871;
-  color: #d4ede4;
+
+:host-context(.dark-mode) #model {
+    background-color: #637871;
+    color: #d4ede4;
 }
+
 #model {
     position: fixed;
 
@@ -81,27 +93,33 @@ label{
 
     animation: modalFadeScale 0.35s ease-out;
 }
-span{
+
+span {
     font-size: 25px;
     color: hsla(36, 31%, 90%, 1);
     cursor: pointer;
 }
-#page{
+
+#page {
     margin-right: 0px;
     padding-top: 70px;
 }
-.col-5{
+
+.col-5 {
     margin-left: 170px;
 }
+
 .header-row {
     display: flex;
     align-items: center;
 }
+
 @keyframes modalFadeScale {
     0% {
         opacity: 0;
         transform: translateX(-50%) translateY(-20px) scale(0.95);
     }
+
     100% {
         opacity: 1;
         transform: translateX(-50%) translateY(0) scale(1);
@@ -116,13 +134,13 @@ span{
         padding-top: 120px;
     }
 
-  #model {
-    top: calc(150px + 1vh);
-    width: calc(100vw - 20px);
-    height: auto;
-  }
+    #model {
+        top: calc(150px + 1vh);
+        width: calc(100vw - 20px);
+        height: auto;
+    }
 
-    /* 🔥 FIX MODAL CONTENT LAYOUT */
+
     #model .row {
         display: flex;
         flex-direction: column;
@@ -164,6 +182,7 @@ span{
         margin: 20px auto;
         text-align: center;
     }
+
     .box {
         width: calc(100vw - 20px);
         height: auto;
@@ -182,360 +201,358 @@ span{
     }
 }
 
-@media (min-width: 600px) and (max-width: 899px) and (orientation:portrait){
+@media (min-width: 600px) and (max-width: 899px) and (orientation:portrait) {
 
-#Internships {
-    height: auto;
-    padding-bottom: 80px;
+    #Internships {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    #model {
+        top: calc(160px + 1vh);
+        width: min(700px, 92vw);
+        height: auto;
+    }
+
+
+    #model .row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .col-1,
+    .col-5 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #model h4 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    #model h5,
+    #model label {
+        font-size: 17px;
+    }
+
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 26px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .box {
+        width: min(700px, 90vw);
+        height: auto;
+        padding: 35px 10px;
+        margin: 20px auto;
+    }
+
+    label {
+        margin-left: 25px;
+        width: auto;
+        font-size: 17px;
+    }
+
+    .col-5 {
+        margin-left: 0;
+    }
 }
 
-#model {
-    top: calc(160px + 1vh);
-    width: min(700px, 92vw);
-    height: auto;
-  }
+@media (min-width: 900px) and (max-width: 1199px) and (orientation:portrait) {
 
+    #Internships {
+        height: auto;
+    }
 
-/* SAME STRUCTURE FIX */
-#model .row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+    #model {
+        top: calc(170px + 1vh);
+        width: min(900px, 85vw);
+        height: auto;
+    }
+
+    #model .row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .col-1,
+    .col-5 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #model h4 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    #model h5,
+    #model label {
+        font-size: 18px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .box {
+        width: min(900px, 80vw);
+        height: 150px;
+        margin: 30px auto;
+    }
+
+    label {
+        margin-left: 80px;
+        font-size: 20px;
+    }
+
+    .col-5 {
+        margin-left: 0;
+    }
 }
 
-.col-1,
-.col-5 {
-    width: 100%;
-    margin-left: 0;
-}
-
-#model h4 {
-    text-align: center;
-    font-size: 24px;
-}
-
-#model h5,
-#model label {
-    font-size: 17px;
-}
-
-h2 {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-h4 {
-    font-size: 26px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.box {
-    width: min(700px, 90vw);
-    height: auto;
-    padding: 35px 10px;
-    margin: 20px auto;
-}
-
-label {
-    margin-left: 25px;
-    width: auto;
-    font-size: 17px;
-}
-
-.col-5 {
-    margin-left: 0;
-}
-}
-
-@media (min-width: 900px) and (max-width: 1199px) and (orientation:portrait){
-
-#Internships {
-    height: auto;
-}
-
-  #model {
-    top: calc(170px + 1vh);
-    width: min(900px, 85vw);
-    height: auto;
-  }
-
-/* SAME STRUCTURE FIX */
-#model .row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-}
-
-.col-1,
-.col-5 {
-    width: 100%;
-    margin-left: 0;
-}
-
-#model h4 {
-    text-align: center;
-    font-size: 28px;
-}
-
-#model h5,
-#model label {
-    font-size: 18px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 34px;
-}
-
-h3 {
-    font-size: 22px;
-    text-align: center;
-}
-
-h4 {
-    font-size: 28px;
-    text-align: center;
-}
-
-.box {
-    width: min(900px, 80vw);
-    height: 150px;
-    margin: 30px auto;
-}
-
-label {
-    margin-left: 80px;
-    font-size: 20px;
-}
-
-.col-5 {
-    margin-left: 0;
-}
-}
 @media (min-width: 600px) and (max-width: 899px) and (orientation: landscape) {
 
-#Internships {
-    height: auto;
+    #Internships {
+        height: auto;
+    }
+
+    #model {
+        top: calc(120px + 1vh);
+        width: min(550px, 80vw);
+        height: auto;
+    }
+
+    #model .row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .col-1,
+    .col-5 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #model h4 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #model h5,
+    #model label {
+        font-size: 14px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .box {
+        width: min(550px, 80vw);
+        height: auto;
+        margin: 15px auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
+    label {
+        margin-left: 25px;
+        font-size: 14px;
+    }
+
+    .col-5 {
+        margin-left: 0;
+    }
+
 }
 
-#model {
-    top: calc(120px + 1vh);
-    width: min(550px, 80vw);
-    height: auto;
-  }
-
-/* STRUCTURE */
-#model .row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-}
-
-.col-1,
-.col-5 {
-    width: 100%;
-    margin-left: 0;
-}
-
-#model h4 {
-    text-align: center;
-    font-size: 20px;
-}
-
-#model h5,
-#model label {
-    font-size: 14px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 26px;
-}
-
-h3 {
-    text-align: center;
-    font-size: 18px;
-}
-
-h4 {
-    text-align: center;
-    font-size: 22px;
-}
-
-.box {
-    width: min(550px, 80vw);
-    height: auto;
-    margin: 15px auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-}
-
-label {
-    margin-left: 25px;
-    font-size: 14px;
-}
-
-.col-5 {
-    margin-left: 0;
-}
-
-}
 @media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) {
 
-#Internships {
-    height: auto;
+    #Internships {
+        height: auto;
+    }
+
+    #model {
+        top: calc(140px + 1vh);
+        width: min(650px, 70vw);
+        height: auto;
+    }
+
+    #model .row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .col-1,
+    .col-5 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #model h4 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    #model h5,
+    #model label {
+        font-size: 15px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .box {
+        width: min(650px, 70vw);
+        height: auto;
+        margin: 15px auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
+    label {
+        margin-left: 32px;
+        font-size: 15px;
+    }
+
+    .col-5 {
+        margin-left: 0;
+    }
+
 }
 
- #model {
-    top: calc(140px + 1vh);
-    width: min(650px, 70vw);
-    height: auto;
-  }
-
-/* STRUCTURE */
-#model .row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-}
-
-.col-1,
-.col-5 {
-    width: 100%;
-    margin-left: 0;
-}
-
-#model h4 {
-    text-align: center;
-    font-size: 22px;
-}
-
-#model h5,
-#model label {
-    font-size: 15px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 28px;
-}
-
-h3 {
-    text-align: center;
-    font-size: 18px;
-}
-
-h4 {
-    text-align: center;
-    font-size: 22px;
-}
-
-.box {
-    width: min(650px, 70vw);
-    height: auto;
-    margin: 15px auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-}
-
-label {
-    margin-left: 32px;
-    font-size: 15px;
-}
-
-.col-5 {
-    margin-left: 0;
-}
-
-}
 @media (min-width: 1200px) and (max-width: 1399px) and (orientation: landscape) {
 
-#Internships {
-    height: auto;
-}
+    #Internships {
+        height: auto;
+    }
 
-  #model {
-    top: calc(150px + 1vh);
-    width: min(850px, 60vw);
-    height: auto;
-  }
+    #model {
+        top: calc(150px + 1vh);
+        width: min(850px, 60vw);
+        height: auto;
+    }
 
-/* STRUCTURE */
-#model .row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-}
+    #model .row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 
-.col-1,
-.col-5 {
-    width: 100%;
-    margin-left: 0;
-}
+    .col-1,
+    .col-5 {
+        width: 100%;
+        margin-left: 0;
+    }
 
-#model h4 {
-    text-align: center;
-    font-size: 24px;
-}
+    #model h4 {
+        text-align: center;
+        font-size: 24px;
+    }
 
-#model h5,
-#model label {
-    font-size: 16px;
-}
+    #model h5,
+    #model label {
+        font-size: 16px;
+    }
 
-h2 {
-    text-align: center;
-    font-size: 30px;
-}
+    h2 {
+        text-align: center;
+        font-size: 30px;
+    }
 
-h3 {
-    text-align: center;
-    font-size: 20px;
-}
+    h3 {
+        text-align: center;
+        font-size: 20px;
+    }
 
-h4 {
-    text-align: center;
-    font-size: 24px;
-}
+    h4 {
+        text-align: center;
+        font-size: 24px;
+    }
 
-.box {
-    width: min(850px, 60vw);
-    height: auto;
-    margin: 18px auto;
+    .box {
+        width: min(850px, 60vw);
+        height: auto;
+        margin: 18px auto;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-}
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+    }
 
-label {
-    margin-left: 35px;
-    font-size: 16px;
-}
+    label {
+        margin-left: 35px;
+        font-size: 16px;
+    }
 
-.col-5 {
-    margin-left: 0;
-}
+    .col-5 {
+        margin-left: 0;
+    }
 
 }

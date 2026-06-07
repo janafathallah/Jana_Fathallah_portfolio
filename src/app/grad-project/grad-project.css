@@ -1,16 +1,19 @@
-#GraduationProject{
-    height:1000px;
+#GraduationProject {
+    height: 1000px;
 }
-h2{
-    display:flex;
+
+h2 {
+    display: flex;
     justify-content: center;
     margin-top: 70px;
 }
-#page{
+
+#page {
     margin-right: 0px;
     padding-top: 70px;
 }
-.face{
+
+.face {
     position: relative;
     width: 500px;
     height: 500px;
@@ -19,7 +22,8 @@ h2{
     margin-left: 100px;
     margin-top: 60px;
 }
-.face::before{
+
+.face::before {
     content: '';
     position: absolute;
     top: 0;
@@ -30,68 +34,82 @@ h2{
     background-size: 500px;
     animation: animate 4s ease-in-out infinite;
 }
-:host-context(.dark-mode) .face::before{
+
+:host-context(.dark-mode) .face::before {
     background-image: url("/assets/man (7).png");
 }
 
-@keyframes animate{
-    0%,100%{
+@keyframes animate {
+
+    0%,
+    100% {
         height: 0%;
     }
-    50%{
+
+    50% {
         height: 100%;
     }
 }
-.face::after{
-    content:'';
+
+.face::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 8px;
-    background:hsla(172, 96%, 18%, 0.8);
+    background: hsla(172, 96%, 18%, 0.8);
     border-radius: 8px;
     filter: drop-shadow(0 0 20px hsla(172, 96%, 18%, 0.8)) drop-shadow(0 0 60px hsla(172, 96%, 18%, 0.8));
     animation: animate_line 4s ease-in-out infinite;
 }
-:host-context(.dark-mode) .face::after{
-    background:#689b8a;
+
+:host-context(.dark-mode) .face::after {
+    background: #689b8a;
     filter: drop-shadow(0 0 20px #689b8a) drop-shadow(0 0 60px #689b8a);
 }
-@keyframes animate_line{
-    0%,100%{
+
+@keyframes animate_line {
+
+    0%,
+    100% {
         top: 0%;
     }
-    50%{
+
+    50% {
         top: 100%;
     }
 }
 
-.face .dots{
+.face .dots {
     position: absolute;
     inset: 0;
 }
-.face .dots::before{
+
+.face .dots::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 500px;
     height: 500px;
-    
+
 }
-h4{
+
+h4 {
     margin: 60px auto auto 300px;
     font-size: 30px;
 }
-p{
+
+p {
     width: 900px;
     font-size: 20px;
     margin-top: 40px;
     margin-left: 300px;
 }
-#button{
-    width:400px;
+
+#button {
+    width: 400px;
     height: 100px;
     border-radius: 15px;
     background-color: #025a4e;
@@ -100,266 +118,272 @@ p{
     cursor: pointer;
     align-items: center;
 }
-:host-context(.dark-mode) #button{
+
+:host-context(.dark-mode) #button {
     background-color: #689b8a;
 }
-img{
+
+img {
     width: 80px;
     height: auto;
     margin-left: 60px;
     margin-top: 13px;
 }
-label{
+
+label {
     font-weight: 800;
     font-size: xx-large;
-    width:200px;
+    width: 200px;
     margin-left: 47px;
     color: white;
 }
 
 @media (max-width: 599px) {
 
-#GraduationProject {
-    height: auto;
-    padding-bottom: 80px;
-    padding-top: 120px;
+    #GraduationProject {
+        height: auto;
+        padding-bottom: 80px;
+        padding-top: 120px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .face {
+        width: 280px;
+        height: 280px;
+        background-size: 280px;
+        margin: 40px auto;
+    }
+
+    .face::before {
+        background-size: 280px;
+    }
+
+    .face .dots::before {
+        width: 280px;
+        height: 280px;
+    }
+
+    h4 {
+        margin: 20px auto;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    p {
+        width: calc(100vw - 30px);
+        margin: 20px auto;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #button {
+        width: 90%;
+        height: 90px;
+
+        margin: 60px auto 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    #button label {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    #button img {
+        width: 60px;
+        height: auto;
+        margin-left: 20px;
+    }
 }
 
-h2 {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.face {
-    width: 280px;
-    height: 280px;
-    background-size: 280px;
-    margin: 40px auto;
-}
-
-.face::before {
-    background-size: 280px;
-}
-
-.face .dots::before {
-    width: 280px;
-    height: 280px;
-}
-
-h4 {
-    margin: 20px auto;
-    font-size: 20px;
-    text-align: center;
-}
-
-p {
-    width: calc(100vw - 30px);
-    margin: 20px auto;
-    font-size: 16px;
-    text-align: center;
-}
-
-#button{
-    width: 90%;
-    height: 90px;
-
-    margin: 60px auto 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;  /* keeps whole thing centered */
-
-    gap: 20px; /* label ↔ image spacing */
-}
-
-#button label{
-    font-size: 28px;  /* bigger label */
-    margin: 0;
-}
-
-#button img{
-    width: 60px;
-    height: auto;
-    margin-left: 20px; /* more right */
-}
-}
 @media (min-width: 600px) and (max-width: 899px) {
 
-#GraduationProject {
-    height: auto;
-    padding-bottom: 100px;
+    #GraduationProject {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    .face {
+        width: 380px;
+        height: 380px;
+        background-size: 380px;
+        margin: 50px auto;
+    }
+
+    .face::before {
+        background-size: 380px;
+    }
+
+    .face .dots::before {
+        width: 380px;
+        height: 380px;
+    }
+
+    h4 {
+        margin: 30px auto;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    p {
+        width: 90%;
+        margin: 30px auto;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #button {
+        width: 380px;
+        height: 100px;
+
+        margin: 70px auto 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+    #button label {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    #button img {
+        width: 65px;
+        height: auto;
+        margin-left: 25px;
+    }
 }
 
-.face {
-    width: 380px;
-    height: 380px;
-    background-size: 380px;
-    margin: 50px auto;
-}
-
-.face::before {
-    background-size: 380px;
-}
-
-.face .dots::before {
-    width: 380px;
-    height: 380px;
-}
-
-h4 {
-    margin: 30px auto;
-    font-size: 24px;
-    text-align: center;
-}
-
-p {
-    width: 90%;
-    margin: 30px auto;
-    font-size: 18px;
-    text-align: center;
-}
-
-#button{
-    width: 380px;
-    height: 100px;
-
-    margin: 70px auto 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 25px;
-}
-
-#button label{
-    font-size: 30px;
-    margin: 0;
-}
-
-#button img{
-    width: 65px;
-    height: auto;
-    margin-left: 25px;
-}
-}
 @media (min-width: 900px) and (max-width: 1199px) {
 
-#GraduationProject {
-    height: auto;
-    padding-bottom: 120px;
+    #GraduationProject {
+        height: auto;
+        padding-bottom: 120px;
+    }
+
+    .face {
+        width: 450px;
+        height: 450px;
+        background-size: 450px;
+        margin: 60px auto;
+    }
+
+    .face::before {
+        background-size: 450px;
+    }
+
+    .face .dots::before {
+        width: 450px;
+        height: 450px;
+    }
+
+    h4 {
+        margin: 40px auto;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    p {
+        width: 80%;
+        margin: 40px auto;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #button {
+        width: 420px;
+        height: 110px;
+
+        margin: 80px auto 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 30px;
+    }
+
+    #button label {
+        font-size: 34px;
+        margin: 0;
+    }
+
+    #button img {
+        width: 70px;
+        height: auto;
+        margin-left: 30px;
+    }
 }
 
-.face {
-    width: 450px;
-    height: 450px;
-    background-size: 450px;
-    margin: 60px auto;
-}
-
-.face::before {
-    background-size: 450px;
-}
-
-.face .dots::before {
-    width: 450px;
-    height: 450px;
-}
-
-h4 {
-    margin: 40px auto;
-    font-size: 28px;
-    text-align: center;
-}
-
-p {
-    width: 80%;
-    margin: 40px auto;
-    font-size: 19px;
-    text-align: center;
-}
-
-#button{
-    width: 420px;
-    height: 110px;
-
-    margin: 80px auto 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 30px;
-}
-
-#button label{
-    font-size: 34px;
-    margin: 0;
-}
-
-#button img{
-    width: 70px;
-    height: auto;
-    margin-left: 30px;
-}
-}
 @media (min-width: 1200px) and (max-width: 1399px) {
 
-#GraduationProject {
-    height: auto;
-    padding-bottom: 140px;
-}
+    #GraduationProject {
+        height: auto;
+        padding-bottom: 140px;
+    }
 
-.face {
-    width: 520px;
-    height: 520px;
-    background-size: 520px;
-    margin: 70px auto;
-}
+    .face {
+        width: 520px;
+        height: 520px;
+        background-size: 520px;
+        margin: 70px auto;
+    }
 
-.face::before {
-    background-size: 520px;
-}
+    .face::before {
+        background-size: 520px;
+    }
 
-.face .dots::before {
-    width: 520px;
-    height: 520px;
-}
+    .face .dots::before {
+        width: 520px;
+        height: 520px;
+    }
 
-h4 {
-    margin: 45px auto;
-    font-size: 32px;
-    text-align: center;
-}
+    h4 {
+        margin: 45px auto;
+        font-size: 32px;
+        text-align: center;
+    }
 
-p {
-    width: 75%;
-    margin: 45px auto;
-    font-size: 21px;
-    text-align: center;
-}
+    p {
+        width: 75%;
+        margin: 45px auto;
+        font-size: 21px;
+        text-align: center;
+    }
 
-#button {
-    width: 480px;
-    height: 120px;
+    #button {
+        width: 480px;
+        height: 120px;
 
-    margin: 90px auto 0 auto;
+        margin: 90px auto 0 auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    gap: 35px;
-}
+        gap: 35px;
+    }
 
-#button label {
-    font-size: 36px;
-    margin: 0;
-}
+    #button label {
+        font-size: 36px;
+        margin: 0;
+    }
 
-#button img {
-    width: 75px;
-    height: auto;
-    margin-left: 32px;
-}
+    #button img {
+        width: 75px;
+        height: auto;
+        margin-left: 32px;
+    }
 }

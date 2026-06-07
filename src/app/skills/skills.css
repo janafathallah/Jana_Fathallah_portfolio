@@ -46,70 +46,77 @@ h5 {
     font-size: 12px;
     font-weight: bold;
 }
+
 :host-context(.dark-mode) .tip {
-  background: #689b8a;
-  color: #d4ede4;
+    background: #689b8a;
+    color: #d4ede4;
 }
 
-:host-context(.dark-mode) #html, :host-context(.dark-mode) #css, :host-context(.dark-mode) #js, :host-context(.dark-mode) #java, :host-context(.dark-mode) #sql, :host-context(.dark-mode) #angular{
+:host-context(.dark-mode) #html,
+:host-context(.dark-mode) #css,
+:host-context(.dark-mode) #js,
+:host-context(.dark-mode) #java,
+:host-context(.dark-mode) #sql,
+:host-context(.dark-mode) #angular {
     background: linear-gradient(to right,
-        #689b8a 0%,
-        #689b8a var(--progress),
-        #d4ede4 var(--progress),
-        #d4ede4 100%);
+            #689b8a 0%,
+            #689b8a var(--progress),
+            #d4ede4 var(--progress),
+            #d4ede4 100%);
 }
 
 #html {
     --target: 70%;
     background: linear-gradient(to right,
-        hsla(172, 96%, 18%, 1) 0%,
-        hsla(172, 96%, 18%, 1) var(--progress),
-        white var(--progress),
-        white 100%);
+            hsla(172, 96%, 18%, 1) 0%,
+            hsla(172, 96%, 18%, 1) var(--progress),
+            white var(--progress),
+            white 100%);
 }
+
 #css {
     --target: 60%;
     background: linear-gradient(to right,
-        hsla(172, 96%, 18%, 1) 0%,
-        hsla(172, 96%, 18%, 1) var(--progress),
-        white var(--progress),
-        white 100%);
+            hsla(172, 96%, 18%, 1) 0%,
+            hsla(172, 96%, 18%, 1) var(--progress),
+            white var(--progress),
+            white 100%);
 }
 
 #js {
     --target: 80%;
     background: linear-gradient(to right,
-        hsla(172, 96%, 18%, 1) 0%,
-        hsla(172, 96%, 18%, 1) var(--progress),
-        white var(--progress),
-        white 100%);
+            hsla(172, 96%, 18%, 1) 0%,
+            hsla(172, 96%, 18%, 1) var(--progress),
+            white var(--progress),
+            white 100%);
 }
 
 #angular {
     --target: 70%;
     background: linear-gradient(to right,
-        hsla(172, 96%, 18%, 1) 0%,
-        hsla(172, 96%, 18%, 1) var(--progress),
-        white var(--progress),
-        white 100%);
+            hsla(172, 96%, 18%, 1) 0%,
+            hsla(172, 96%, 18%, 1) var(--progress),
+            white var(--progress),
+            white 100%);
 }
 
 #sql {
     --target: 90%;
     background: linear-gradient(to right,
-        hsla(172, 96%, 18%, 1) 0%,
-        hsla(172, 96%, 18%, 1) var(--progress),
-        white var(--progress),
-        white 100%);
+            hsla(172, 96%, 18%, 1) 0%,
+            hsla(172, 96%, 18%, 1) var(--progress),
+            white var(--progress),
+            white 100%);
 }
 
 #java {
     --target: 90%;
     background: linear-gradient(to right,
-        hsla(172, 96%, 18%, 1) 0%,
-        hsla(172, 96%, 18%, 1) var(--progress),
-        white var(--progress),
-        white 100%);
+            hsla(172, 96%, 18%, 1) 0%,
+            hsla(172, 96%, 18%, 1) var(--progress),
+            white var(--progress),
+            white 100%);
 }
 
 #html,
@@ -118,7 +125,7 @@ h5 {
 #angular,
 #sql,
 #java {
-  --progress: 0%;
+    --progress: 0%;
 }
 
 
@@ -167,10 +174,15 @@ h5 {
             white var(--progress) 100%);
     animation: fillCircle 2s linear forwards;
 }
-:host-context(.dark-mode) #teamwork, :host-context(.dark-mode) #communication, :host-context(.dark-mode) #problemSolving, :host-context(.dark-mode) #creativity{
+
+:host-context(.dark-mode) #teamwork,
+:host-context(.dark-mode) #communication,
+:host-context(.dark-mode) #problemSolving,
+:host-context(.dark-mode) #creativity {
     background: conic-gradient(#689b8a 0% var(--progress),
             #d4ede4 var(--progress) 100%);
 }
+
 #communication {
     --target: 80%;
     --progress: 0%;
@@ -208,161 +220,167 @@ h5 {
 
     position: absolute;
 }
-:host-context(.dark-mode) .circle::before{
+
+:host-context(.dark-mode) .circle::before {
     background: #233831;
 }
+
 .circle span {
     position: relative;
     z-index: 2;
     font-weight: bold;
 }
+
 @media (max-width: 599px) {
 
-#Skills {
-    height: auto;
-    padding-bottom: 80px;
-    padding-top: 120px;
+    #Skills {
+        height: auto;
+        padding-bottom: 80px;
+        padding-top: 120px;
+    }
+
+    #row {
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #technical,
+    #professional {
+        width: 90vw;
+        max-width: 350px;
+    }
+
+    .skill-container {
+        width: 100%;
+    }
+
+    .circle {
+        width: 75px;
+        height: 75px;
+    }
+
+    .circle::before {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tip {
+        font-size: 10px;
+    }
+
+    h2 {
+        font-size: clamp(22px, 6vw, 32px);
+        text-align: center;
+    }
 }
 
-#row {
-    gap: 40px;              /* FIXED from 800px */
-    flex-direction: column;
-    align-items: center;
-}
-
-#technical,
-#professional {
-    width: 90vw;
-    max-width: 350px;
-}
-
-.skill-container {
-    width: 100%;
-}
-
-.circle {
-    width: 75px;
-    height: 75px;
-}
-
-.circle::before {
-    width: 60px;
-    height: 60px;
-}
-
-.tip {
-    font-size: 10px;
-}
-
-h2 {
-    font-size: clamp(22px, 6vw, 32px);
-    text-align: center;
-}
-}
 @media (min-width: 600px) and (max-width: 899px) {
 
-#Skills {
-    height: auto;
-    padding-bottom: 100px;
+    #Skills {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    #row {
+        gap: 80px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #technical,
+    #professional {
+        width: min(400px, 85vw);
+    }
+
+    .skill-container {
+        width: 100%;
+    }
+
+    .circle {
+        width: 85px;
+        height: 85px;
+    }
+
+    .circle::before {
+        width: 68px;
+        height: 68px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+    }
 }
 
-#row {
-    gap: 80px;              /* reduced from 800px */
-    flex-direction: column;
-    align-items: center;
-}
-
-#technical,
-#professional {
-    width: min(400px, 85vw);
-}
-
-.skill-container {
-    width: 100%;
-}
-
-.circle {
-    width: 85px;
-    height: 85px;
-}
-
-.circle::before {
-    width: 68px;
-    height: 68px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 30px;
-}
-}
 @media (min-width: 900px) and (max-width: 1199px) {
 
-#Skills {
-    height: auto;
+    #Skills {
+        height: auto;
+    }
+
+    #row {
+        gap: 200px;
+        justify-content: center;
+    }
+
+    #technical,
+    #professional {
+        width: 400px;
+    }
+
+    .skill-container {
+        width: 100%;
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .circle::before {
+        width: 72px;
+        height: 72px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 34px;
+    }
 }
 
-#row {
-    gap: 200px;             /* controlled spacing */
-    justify-content: center;
-}
-
-#technical,
-#professional {
-    width: 400px;
-}
-
-.skill-container {
-    width: 100%;
-}
-
-.circle {
-    width: 90px;
-    height: 90px;
-}
-
-.circle::before {
-    width: 72px;
-    height: 72px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 34px;
-}
-}
 @media (min-width: 1200px) and (max-width: 1399px) {
 
-#Skills {
-    height: auto;
-}
+    #Skills {
+        height: auto;
+    }
 
-#row {
-    gap: 240px;             /* slightly more spacing for bigger screens */
-    justify-content: center;
-}
+    #row {
+        gap: 240px;
+        justify-content: center;
+    }
 
-#technical,
-#professional {
-    width: 450px;           /* slightly wider cards */
-}
+    #technical,
+    #professional {
+        width: 450px;
+    }
 
-.skill-container {
-    width: 100%;
-}
+    .skill-container {
+        width: 100%;
+    }
 
-.circle {
-    width: 100px;
-    height: 100px;
-}
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
 
-.circle::before {
-    width: 80px;
-    height: 80px;
-}
+    .circle::before {
+        width: 80px;
+        height: 80px;
+    }
 
-h2 {
-    text-align: center;
-    font-size: 38px;
-}
+    h2 {
+        text-align: center;
+        font-size: 38px;
+    }
 }

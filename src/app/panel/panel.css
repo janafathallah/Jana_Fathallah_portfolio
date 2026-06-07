@@ -115,7 +115,7 @@ img {
         justify-content: center;
         align-items: center;
 
-        margin: 0 auto;   /* 👈 extra safety centering */
+        margin: 0 auto;  
     }
 
     img {

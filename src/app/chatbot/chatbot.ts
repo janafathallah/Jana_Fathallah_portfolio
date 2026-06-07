@@ -26,12 +26,12 @@ export class Chatbot {
   addBotMessages(messages: string[]) {
     messages.forEach((message, index) => {
       setTimeout(() => {
-        // add typing indicator
+
         this.messages = [...this.messages, { type: 'bot', text: 'typing' }];
         this.scrollToBottom();
         this.cdr.detectChanges();
 
-        // replace typing with real message after delay
+
         setTimeout(() => {
           this.messages = [...this.messages.slice(0, -1), { type: 'bot', text: message }];
           this.scrollToBottom();

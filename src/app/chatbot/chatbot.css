@@ -1,107 +1,122 @@
-#chat{
+#chat {
   width: 400px;
   height: 600px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
+
 :host {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999999;
 }
-#image{
-    border: solid;
-    border-color: hsla(172, 96%, 18%, 1);
-    border-radius: 50%;
-    border-width: 2px;
-    height: 50px;
-    width: 50px;
-    background-image: url("/assets/self-image.jpg");
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    margin-left: 10px;
-    margin-top: 10px;
+
+#image {
+  border: solid;
+  border-color: hsla(172, 96%, 18%, 1);
+  border-radius: 50%;
+  border-width: 2px;
+  height: 50px;
+  width: 50px;
+  background-image: url("/assets/self-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  margin-top: 10px;
 }
-:host-context(.dark-mode) .top{
-    background-color: #689b8a;
-    color: #d4ede4;
+
+:host-context(.dark-mode) .top {
+  background-color: #689b8a;
+  color: #d4ede4;
 }
-:host-context(.dark-mode) .contact{
-    background-color: #233831;
-    border-color: #689b8a;
+
+:host-context(.dark-mode) .contact {
+  background-color: #233831;
+  border-color: #689b8a;
 }
-h4{
-    margin-bottom: 0;
-    margin-top: 10px;
+
+h4 {
+  margin-bottom: 0;
+  margin-top: 10px;
 }
-h5{
-    margin-top: 0;
-    font-size: 15px;
+
+h5 {
+  margin-top: 0;
+  font-size: 15px;
 }
-.top{
-    background-color: hsla(172, 96%, 18%, 1);
-    color: beige;
-    height: 70px;
+
+.top {
+  background-color: hsla(172, 96%, 18%, 1);
+  color: beige;
+  height: 70px;
 }
-.message{
-    border-style: solid;
-    border-radius: 15px;
-    width: fit-content;
-    border-width: 1px;
-    margin: auto 30px 10px 10px;
-    background-color: white;
-    color:  hsla(172, 96%, 18%, 1);
+
+.message {
+  border-style: solid;
+  border-radius: 15px;
+  width: fit-content;
+  border-width: 1px;
+  margin: auto 30px 10px 10px;
+  background-color: white;
+  color: hsla(172, 96%, 18%, 1);
 }
-.reply{
-    border-style: solid;
-    border-radius: 15px;
-    width: fit-content;
-    border-width: 1px;
-    margin: auto 10px 10px auto;
-    background-color: rgb(164, 218, 210);
-    color:  hsla(172, 96%, 18%, 1);
+
+.reply {
+  border-style: solid;
+  border-radius: 15px;
+  width: fit-content;
+  border-width: 1px;
+  margin: auto 10px 10px auto;
+  background-color: rgb(164, 218, 210);
+  color: hsla(172, 96%, 18%, 1);
 }
-.question{
-    border-style: solid;
-    border-radius: 15px;
-    border-color:  hsla(172, 96%, 18%, 1);
-    width: fit-content;
-    margin: auto auto 10px 10px;
-    cursor: pointer;
+
+.question {
+  border-style: solid;
+  border-radius: 15px;
+  border-color: hsla(172, 96%, 18%, 1);
+  width: fit-content;
+  margin: auto auto 10px 10px;
+  cursor: pointer;
 }
-p{
-    margin: 10px 10px;
+
+p {
+  margin: 10px 10px;
 }
-span{
-    font-size: 25px;
-    margin-left: 20px;
-     cursor: pointer;
+
+span {
+  font-size: 25px;
+  margin-left: 20px;
+  cursor: pointer;
 }
-.bottom{
-  flex: 1;                  /* Take remaining space */
-  overflow-y: scroll;         /* Enable vertical scrolling */
+
+.bottom {
+  flex: 1;
+  overflow-y: scroll;
   padding: 10px;
-  
+
 }
-.contact{
-    border-style: solid;
-    border-radius: 15px;
-    width: fit-content;
-    border-width: 1px;
-    margin: auto 30px 10px 10px;
-    background-color: hsla(172, 96%, 18%, 1);
-    color:  rgb(255, 255, 255);
-    cursor: pointer;
+
+.contact {
+  border-style: solid;
+  border-radius: 15px;
+  width: fit-content;
+  border-width: 1px;
+  margin: auto 30px 10px 10px;
+  background-color: hsla(172, 96%, 18%, 1);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
+
 .typing span {
   display: block;
   width: 9px;
@@ -122,29 +137,41 @@ span{
   box-shadow: none !important;
 }
 
-.typing span:nth-child(1) { animation-delay: 0s; }
-.typing span:nth-child(2) { animation-delay: 0.15s; }
-.typing span:nth-child(3) { animation-delay: 0.3s; }
+.typing span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-6px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 @media (max-width: 599px) {
 
-  /* CHAT CONTAINER */
   #chat {
     width: 260px;
     height: 390px;
   }
 
-  /* TOP BAR */
   .top {
     height: 60px;
   }
 
-  /* AVATAR IMAGE */
   #image {
     width: 38px;
     height: 38px;
@@ -152,7 +179,6 @@ span{
     margin-top: 8px;
   }
 
-  /* HEADINGS */
   h4 {
     font-size: 13px;
     margin-top: 6px;
@@ -164,13 +190,11 @@ span{
     margin-top: 0;
   }
 
-  /* TEXT INSIDE BUBBLES */
   p {
     font-size: 12px;
     margin: 6px 6px;
   }
 
-  /* CHAT BUBBLES */
   .message,
   .reply,
   .contact,
@@ -192,17 +216,16 @@ span{
     padding: 6px 8px;
   }
 
-  /* ICONS / BUTTONS */
   .top span {
     margin-left: 2px;
     font-size: 20px;
-}
+  }
 
-  /* SCROLL AREA */
   .bottom {
     padding: 8px;
   }
 }
+
 @media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
 
   #chat {
@@ -219,10 +242,17 @@ span{
     height: 42px;
   }
 
-  h4 { font-size: 15px; }
-  h5 { font-size: 12px; }
+  h4 {
+    font-size: 15px;
+  }
 
-  p { font-size: 13px; }
+  h5 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 13px;
+  }
 
   .message,
   .reply,
@@ -231,17 +261,18 @@ span{
     font-size: 13px;
   }
 
-    .top span {
+  .top span {
     margin-left: 2px;
     font-size: 20px;
+  }
 }
-}
+
 @media (min-width: 600px) and (max-width: 899px) and (orientation: landscape) {
 
   #chat {
     width: 300px;
-    height: 70vh; /* key fix */
-    max-height: 420px; /* prevents it from becoming too tall */
+    height: 70vh;
+    max-height: 420px;
   }
 
   .top {
@@ -274,15 +305,16 @@ span{
     padding: 6px 8px;
   }
 
-    .top span {
+  .top span {
     margin-left: 2px;
     font-size: 20px;
-}
+  }
 
   .bottom {
     padding: 6px;
   }
 }
+
 @media (min-width: 900px) and (max-width: 1199px) and (orientation: portrait) {
 
   #chat {
@@ -299,8 +331,13 @@ span{
     height: 46px;
   }
 
-  h4 { font-size: 16px; }
-  h5 { font-size: 13px; }
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 13px;
+  }
 
   p {
     font-size: 14px;
@@ -319,17 +356,18 @@ span{
     font-size: 25px;
     margin-left: 20px;
     cursor: pointer;
-}
+  }
 
   .bottom {
     padding: 10px;
   }
 
-    .top span {
+  .top span {
     margin-left: 7px;
     font-size: 20px;
+  }
 }
-}
+
 @media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) {
 
   #chat {
@@ -347,8 +385,13 @@ span{
     height: 42px;
   }
 
-  h4 { font-size: 15px; }
-  h5 { font-size: 12px; }
+  h4 {
+    font-size: 15px;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
 
   p {
     font-size: 13px;
@@ -367,52 +410,58 @@ span{
     font-size: 25px;
     margin-left: 20px;
     cursor: pointer;
-}
+  }
 
   .bottom {
     padding: 8px;
   }
 }
+
 @media (min-width: 1200px) and (max-width: 1399px) and (orientation: landscape) {
 
-#chat {
+  #chat {
     width: 420px;
     height: 72vh;
     max-height: 560px;
-}
+  }
 
-.top {
+  .top {
     height: 65px;
-}
+  }
 
-#image {
+  #image {
     width: 46px;
     height: 46px;
-}
+  }
 
-h4 { font-size: 16px; }
-h5 { font-size: 13px; }
+  h4 {
+    font-size: 16px;
+  }
 
-p {
+  h5 {
+    font-size: 13px;
+  }
+
+  p {
     font-size: 14px;
     margin: 8px 10px;
-}
+  }
 
-.message,
-.reply,
-.contact,
-.question {
+  .message,
+  .reply,
+  .contact,
+  .question {
     font-size: 14px;
     padding: 8px 10px;
-}
+  }
 
-.top span {
+  .top span {
     font-size: 25px;
     margin-left: 20px;
     cursor: pointer;
-}
+  }
 
-.bottom {
+  .bottom {
     padding: 10px;
-}
+  }
 }

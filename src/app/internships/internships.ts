@@ -14,7 +14,7 @@ export class Internships {
   status = false;
   showModal = false;
 
-  
+
   onClick(company: string) {
     this.internship = this.service.internships.find(
       (x: { company: string }) => x.company == company
