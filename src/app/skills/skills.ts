@@ -8,110 +8,90 @@ import { AfterViewInit, Component, ElementRef } from '@angular/core';
 })
 export class Skills implements AfterViewInit {
 
-  private hasAnimated = false;
-  private intervals: any[] = [];
+private hasAnimated = false;
 
-  constructor(private el: ElementRef) { }
+private skillIds = [
+  'html',
+  'css',
+  'js',
+  'angular',
+  'sql',
+  'java',
+  'teamwork',
+  'communication',
+  'problemSolving',
+  'creativity'
+];
 
-  ngAfterViewInit() {
-    this.createObserver();
-  }
+constructor(private el: ElementRef) {}
 
-  createObserver() {
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          if (!this.hasAnimated) {
-            this.hasAnimated = true;
+ngAfterViewInit() {
+  this.createObserver();
+}
 
-            setTimeout(() => {
-              this.animateAll();
-            }, 80);
-          }
-        } else {
+createObserver() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !this.hasAnimated) {
+          this.hasAnimated = true;
+          this.animateAll();
+        }
+
+        if (!entry.isIntersecting) {
           this.hasAnimated = false;
           this.resetAll();
         }
-      }
-    }, {
-      threshold: 0.3
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(this.el.nativeElement);
+}
+
+animateAll() {
+  this.resetAll();
+
+  // FORCE DOM RESET (critical part)
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      this.animateGroup(
+        ['html', 'css', 'js', 'angular', 'sql', 'java'],
+        300
+      );
+
+      this.animateGroup(
+        ['teamwork', 'communication', 'problemSolving', 'creativity'],
+        300
+      );
     });
+  });
+}
 
-    observer.observe(this.el.nativeElement);
-  }
-
-  animateAll() {
-    this.resetAll();
-
-    this.animateGroup(
-      ['html', 'css', 'js', 'angular', 'sql', 'java'],
-      30,
-      500
-    );
-
-    this.animateGroup(
-      ['teamwork', 'communication', 'problemSolving', 'creativity'],
-      30,
-      500
-    );
-  }
-
-  animateGroup(ids: string[], speed: number, delayBetweenStarts: number) {
-    for (let i = 0; i < ids.length; i++) {
-      const id = ids[i];
-
-      setTimeout(() => {
-        const el = document.getElementById(id);
-
-        if (!el) return;
-
-        const target = parseInt(
-          getComputedStyle(el).getPropertyValue('--target')
-        );
-
-        let current = 0;
-
-        const interval = setInterval(() => {
-          if (current >= target) {
-            clearInterval(interval);
-            return;
-          }
-
-          current++;
-          el.style.setProperty('--progress', `${current}%`);
-        }, speed);
-
-        this.intervals.push(interval);
-      }, i * delayBetweenStarts);
-    }
-  }
-  resetAll() {
-    const ids = [
-      'html',
-      'css',
-      'js',
-      'angular',
-      'sql',
-      'java',
-      'teamwork',
-      'communication',
-      'problemSolving',
-      'creativity'
-    ];
-
-    for (const interval of this.intervals) {
-      clearInterval(interval);
-    }
-
-    this.intervals = [];
-
-    for (const id of ids) {
+animateGroup(ids: string[], delay: number) {
+  ids.forEach((id, i) => {
+    setTimeout(() => {
       const el = document.getElementById(id);
+      if (!el) return;
 
-      if (el) {
-        el.style.setProperty('--progress', '0%');
-        el.style.animation = 'none';
-      }
-    }
-  }
+      const target = getComputedStyle(el)
+        .getPropertyValue('--target')
+        .trim();
+
+      el.style.setProperty('--progress', target);
+    }, i * delay);
+  });
+}
+
+resetAll() {
+  this.skillIds.forEach((id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.transition = 'none';
+    el.style.setProperty('--progress', '0%');
+    void el.offsetHeight;
+    el.style.transition = '';
+  });
+}
 }

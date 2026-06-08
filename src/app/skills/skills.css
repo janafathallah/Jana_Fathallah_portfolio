@@ -172,7 +172,6 @@ h5 {
     --progress: 0%;
     background: conic-gradient(hsla(172, 96%, 18%, 1) 0% var(--progress),
             white var(--progress) 100%);
-    animation: fillCircle 2s linear forwards;
 }
 
 :host-context(.dark-mode) #teamwork,
@@ -188,7 +187,6 @@ h5 {
     --progress: 0%;
     background: conic-gradient(hsla(172, 96%, 18%, 1) 0% var(--progress),
             white var(--progress) 100%);
-    animation: fillCircle 2s linear forwards;
 }
 
 
@@ -199,7 +197,6 @@ h5 {
     background: conic-gradient(hsla(172, 96%, 18%, 1) 0% var(--progress),
             white var(--progress) 100%);
 
-    animation: fillCircle 2s linear forwards;
 }
 
 #creativity {
@@ -207,7 +204,6 @@ h5 {
     --progress: 0%;
     background: conic-gradient(hsla(172, 96%, 18%, 1) 0% var(--progress),
             white var(--progress) 100%);
-    animation: fillCircle 2s linear forwards;
 }
 
 .circle::before {
@@ -229,6 +225,19 @@ h5 {
     position: relative;
     z-index: 2;
     font-weight: bold;
+}
+
+#html,
+#css,
+#js,
+#angular,
+#sql,
+#java,
+#teamwork,
+#communication,
+#problemSolving,
+#creativity {
+    transition: --progress 4s ease;
 }
 
 @media (max-width: 599px) {
